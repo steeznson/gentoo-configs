@@ -1,16 +1,17 @@
+!---------
+!Theme: Vain Attempt
+!--------
+
 ! Font
-URxvt*font: *-terminus-*-*-*-*-*-*-*-*-*-*-*-*
-
-! transparency
-urxvt*transparent: true
-urxvt*shading: 15
-
-! scrollbar
-URxvt*scrollBar: false
+URxvt*font: xft:xos4 Terminus:size=10 
 
 !----------
 !  Colors
 !----------
+
+! transparency
+urxvt*transparent: true
+urxvt*shading: 15
 
 URxvt.background: #262626
 URxvt.foreground: #ffffff
@@ -71,10 +72,20 @@ URxvt.color246: #a89984
 URxvt.color248: #bdae93
 URxvt.color250: #d5c4a1
 
+!----------------------
+!urxvt scrolling options and cursor style:
+!----------------------
+
+URxvt*saveLines: 12000
+URxvt*scrollstyle:plain
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+
 !-------------------
 ! Perl Extensions
 !------------------
-!-*- Perl extensions -*-
 URxvt.perl-ext-common: default,selection-to-clipboard,matcher,keyboard-select
 URxvt.keysym.M-u:     perl:url-select:select_next
 URxvt.url-launcher:   /usr/bin/firefox
