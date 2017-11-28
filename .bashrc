@@ -22,6 +22,6 @@ alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
 
 # Perl 6
 
-alias zef='/home/james/Programming/Source/rakudo-star-2017.10/modules/zef/bin/zef'
-
 alias perl6='/home/james/Programming/Source/rakudo-star-2017.10/perl6'
+
+alias zef='perl6 /home/james/Programming/Source/rakudo-star-2017.10/modules/zef/bin/zef'

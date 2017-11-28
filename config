@@ -213,4 +213,4 @@ bindsym $mod+shift+f exec --no-startup-id firefox
 new_window 1pixel
 
 # point to terminus directory
-exec xset +fp /usr/share/fonts/terminus/
+exec --no-startup-id xset +fp /usr/share/fonts/terminus/
