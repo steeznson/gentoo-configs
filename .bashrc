@@ -25,3 +25,13 @@ alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
 alias perl6='/home/james/Programming/Source/rakudo-star-2017.10/perl6'
 
 alias zef='perl6 /home/james/Programming/Source/rakudo-star-2017.10/modules/zef/bin/zef'
+
+# Radio
+
+alias bbc1x='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p'
+
+alias bbc3='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p'
+
+alias bbc4='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4_mf_p'
+
+alias bbc6='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
