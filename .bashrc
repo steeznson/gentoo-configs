@@ -16,15 +16,17 @@ export EDITOR=nvim
 
 alias vi=nvim
 
+alias vim=nvim
+
 # Standalone PHP
 
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
 
 # Perl 6
 
-alias perl6='/home/james/Programming/Source/rakudo-star-2017.10/perl6'
+alias perl6='/home/james/Apps/Rakudo/rakudo-star-2017.10/perl6'
 
-alias zef='perl6 /home/james/Programming/Source/rakudo-star-2017.10/modules/zef/bin/zef'
+alias zef='perl6 /home/james/Apps/Rakudo/rakudo-star-2017.10/modules/zef/bin/zef'
 
 # Radio
 
