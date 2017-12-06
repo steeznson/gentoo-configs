@@ -2,7 +2,7 @@
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
 media-libs/mesa -bindist
-dev-lang/php mysqli pdo postgres
+dev-lang/php pdo
 
 ## Package Requirements
 net-misc/iputils -caps -filecaps
