@@ -3,6 +3,7 @@ dev-libs/openssl -bindist
 net-misc/openssh -bindist
 media-libs/mesa -bindist
 dev-lang/php pdo
+sys-libs/zlib minizip
 
 ## Package Requirements
 net-misc/iputils -caps -filecaps

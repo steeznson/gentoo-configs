@@ -1,43 +1,37 @@
-!---------
-!Theme: Vain Attempt
+!--------
+! Theme: Vain Attempt
 !--------
 
-! Font
-URxvt*font: xft:xos4 Terminus:size=10 
-
-!----------
-!  Colors
-!----------
-
-! transparency
+!transparency
 urxvt*transparent: true
 urxvt*shading: 15
 
+!urxvt colours
 URxvt.background: #262626
 URxvt.foreground: #ffffff
 
-! Black + DarkGrey
+!Black + DarkGrey
 *color0:  #282828
 *color8:  #928374
-! DarkRed + Red
+!DarkRed + Red
 *color1:  #cc241d
 *color9:  #fb4934
-! DarkGreen + Green
+!DarkGreen + Green
 *color2:  #98971a
 *color10: #b8bb26
-! DarkYellow + Yellow
+!DarkYellow + Yellow
 *color3:  #d79921
 *color11: #fabd2f
-! DarkBlue + Blue
+!DarkBlue + Blue
 *color4:  #458588
 *color12: #83a598
-! DarkMagenta + Magenta
+!DarkMagenta + Magenta
 *color5:  #b16286
 *color13: #d3869b
-! DarkCyan + Cyan
+!DarkCyan + Cyan
 *color6:  #689d6a
 *color14: #8ec07c
-! LightGrey + White
+!LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
 
@@ -72,9 +66,21 @@ URxvt.color246: #a89984
 URxvt.color248: #bdae93
 URxvt.color250: #d5c4a1
 
-!----------------------
+!urxvt fonts: 
+
+URxvt*font: xft:xos4 Terminus:size=10
+URxvt*boldFont: xft:xos4 Terminus:bold:size=10
+
+!urxvt extensions:
+
+URxvt.perl-ext-common:  default,matcher,tabbedex
+
+!enabling clickable links:
+
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1 
+
 !urxvt scrolling options and cursor style:
-!----------------------
 
 URxvt*saveLines: 12000
 URxvt*scrollstyle:plain
@@ -82,13 +88,12 @@ URxvt*scrollBar: false
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
 
+!urxvt tabs settings:
 
-!-------------------
-! Perl Extensions
-!------------------
-URxvt.perl-ext-common: default,selection-to-clipboard,matcher,keyboard-select
-URxvt.keysym.M-u:     perl:url-select:select_next
-URxvt.url-launcher:   /usr/bin/firefox
-URxvt.underlineURLs:  True
-URxvt.matcher.button: 1 
-URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: no
