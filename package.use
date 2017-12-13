@@ -595,3 +595,35 @@ net-misc/iputils -caps -filecaps
 # required by games-emulation/pcsx2-1.4.0::gentoo
 # required by games-emulation/pcsx2 (argument)
 >=media-libs/glu-9.0.0-r1 abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[lcms]
+# required by app-emulation/wine-vanilla (argument)
+>=media-libs/lcms-2.9 abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[ldap]
+# required by app-emulation/wine-vanilla (argument)
+>=net-nds/openldap-2.4.44 abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[mp3]
+# required by app-emulation/wine-vanilla (argument)
+>=media-sound/mpg123-1.25.6 abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[xml]
+# required by app-emulation/wine-vanilla (argument)
+>=dev-libs/libxslt-1.1.30-r2 abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[gecko]
+# required by app-emulation/wine-vanilla (argument)
+>=app-emulation/wine-gecko-2.47-r1 abi_x86_32
+# required by net-nds/openldap-2.4.44::gentoo[-libressl,ssl,-gnutls]
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[ldap]
+# required by app-emulation/wine-vanilla (argument)
+>=dev-libs/openssl-1.0.2n abi_x86_32
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[udev]
+# required by app-emulation/wine-vanilla (argument)
+>=virtual/libudev-232 abi_x86_32
+# required by virtual/libudev-232::gentoo[-systemd,-static-libs]
+# required by sys-fs/lvm2-2.02.145-r2::gentoo
+# required by sys-fs/cryptsetup-1.7.4::gentoo
+# required by dev-libs/volume_key-0.3.9::gentoo
+# required by sys-libs/libblockdev-2.14::gentoo[crypt]
+# required by sys-fs/udisks-2.7.4::gentoo
+# required by app-emulation/wine-vanilla-2.0.3::gentoo[udisks]
+# required by app-emulation/wine-vanilla (argument)
+>=sys-fs/eudev-3.1.5 abi_x86_32
+# required by wine-vanilla
