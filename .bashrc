@@ -37,3 +37,9 @@ alias bbc3='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p'
 alias bbc4='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p'
 
 alias bbc6='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
+
+# Shutdown
+
+alias reboot='sudo reboot'
+
+alias poweroff='sudo poweroff'
