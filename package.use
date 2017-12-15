@@ -5,6 +5,7 @@ media-libs/mesa -bindist
 dev-lang/php pdo
 sys-libs/zlib minizip
 app-portage/layman sync-plugin-portage git
+dev-lang/ghc binary
 
 ## Package Requirements
 net-misc/iputils -caps -filecaps
