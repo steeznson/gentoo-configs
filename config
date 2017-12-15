@@ -200,14 +200,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl prev
 
 # Set maximum floating window size
-floating_maximum_size 800 x 600
+floating_maximum_size 1000 x 650
 floating_minimum_size 75 x 50
 
 # Set keymap 
 exec --no-startup-id setxkbmap gb
 
 # Shortcuts
-bindsym $mod+shift+f exec --no-startup-id firefox
+bindsym $mod+shift+f exec --no-startup-id waterfox-bin
 bindsym $mod+shift+g exec --no-startup-id gummi
 
 # Remove window header
@@ -215,3 +215,7 @@ new_window 1pixel
 
 # point to terminus directory
 exec --no-startup-id xset +fp /usr/share/fonts/terminus/
+
+# i3 gaps
+gaps inner 8
+gaps outer 4
