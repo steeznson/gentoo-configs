@@ -217,5 +217,5 @@ new_window 1pixel
 exec --no-startup-id xset +fp /usr/share/fonts/terminus/
 
 # i3 gaps
-gaps inner 8
-gaps outer 4
+gaps inner 5
+gaps outer 2
