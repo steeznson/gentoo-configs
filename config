@@ -209,6 +209,7 @@ exec --no-startup-id setxkbmap gb
 # Shortcuts
 bindsym $mod+shift+f exec --no-startup-id waterfox-bin
 bindsym $mod+shift+g exec --no-startup-id gummi
+bindsym $mod+shift+m exec --no-startup-id emacs
 
 # Remove window header
 new_window 1pixel
