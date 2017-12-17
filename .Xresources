@@ -73,7 +73,7 @@ URxvt*boldFont: xft:xos4 Terminus:bold:size=10
 
 !urxvt extensions:
 
-URxvt.perl-ext-common:  default,matcher,tabbedex
+URxvt.perl-ext-common:  default,matcher
 
 !enabling clickable links:
 
