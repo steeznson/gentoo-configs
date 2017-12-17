@@ -6,7 +6,6 @@
 use_xft yes
 xftfont Terminus:size=4
 
-
 ## No output to X <yes/no>
 out_to_x no
 
@@ -52,10 +51,10 @@ cpu_avg_samples 2
 ## Stuff after 'TEXT' will be formatted on screen
 TEXT
 # Free space on /home
-${fs_free /home} | \
+${fs_free /home} * \
 # CPU stats
-CPU ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
+CPU ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} * \
 # RAM in use
-RAM ${memperc}% | \
-PWR ${battery_bar BAT0} | \
-${time %a %d.%m.%y} ${time %H:%M} | \
+RAM ${memperc}% * \
+PWR ${battery_bar BAT0} * \
+${time %a %d.%m.%y} ${time %H:%M} * \
