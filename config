@@ -164,7 +164,7 @@ bar {
 exec --no-startup-id sh ~/.fehbg &
 
 # Compositing
-#exec --no-startup-id compton -b &
+exec --no-startup-id xcompmgr -b &
 
 # Network Manager
 exec --no-startup-id nm-applet &

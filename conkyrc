@@ -22,7 +22,7 @@ double_buffer no
 background no
 
 ## Update interval in seconds
-update_interval 2.0
+update_interval 1.5
 
 ## This is the number of times Conky will update before quitting.
 ## Set to zero to run forever.
@@ -58,3 +58,4 @@ CPU ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print 
 RAM ${memperc}% * \
 PWR ${battery_bar BAT0} * \
 ${time %a %d.%m.%y} ${time %H:%M} * \
+VOL ${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} * \
