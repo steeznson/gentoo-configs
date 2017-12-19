@@ -37,3 +37,7 @@ alias bbc6='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 alias reboot='sudo reboot'
 
 alias poweroff='sudo poweroff'
+
+# Weather
+
+alias weather='curl wttr.in/edinburgh'
