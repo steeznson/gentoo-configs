@@ -157,7 +157,7 @@ bar {
 		statusline #EBDBB2
 	}
         	status_command conky -c ~/.config/i3/conkyrc 
-		position bottom
+		position top
 }
 
 # Wallpaper

@@ -16,3 +16,4 @@ dev-libs/gobject-introspection python_single_target_python2_7
 # required by gnome-keyring
 # required by networkmanager
 app-crypt/pinentry gnome-keyring
+
