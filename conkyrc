@@ -15,9 +15,9 @@ override_utf8_locale no
 cpu_avg_samples 2
 
 TEXT
-${fs_free /home} | \
-CPU ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
-RAM ${memperc}% | \
-PWR ${battery_bar BAT0} | \
-VOL ${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} | \
-${time %d.%m.%y} | ${time %H:%M} | \
+${fs_free /home} * \
+CPU ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} * \
+RAM ${memperc}% * \
+PWR ${battery_bar BAT0} * \
+VOL ${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} * \
+${time %a %d.%m.%y} ${time %H:%M} * \
