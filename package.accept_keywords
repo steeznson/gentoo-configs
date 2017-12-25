@@ -1,0 +1,45 @@
+## package.accept_keywords
+# required by app-editors/neovim-0.2.0::gentoo
+# required by app-editors/neovim (argument)
+=dev-lua/lpeg-1.0.1 ~amd64
+# required by app-editors/neovim-0.2.0::gentoo
+# required by app-editors/neovim (argument)
+=dev-libs/libvterm-0.0_pre20160305 ~amd64
+# required by app-editors/neovim-0.2.0::gentoo
+# required by app-editors/neovim (argument)
+=dev-libs/msgpack-1.1.0 ~amd64
+# required by app-editors/neovim (argument)
+=app-editors/neovim-0.2.0 ~amd64
+# required by app-editors/neovim-0.2.0::gentoo[tui]
+# required by app-editors/neovim (argument)
+=dev-libs/unibilium-1.2.1 ~amd64
+# required by app-editors/neovim-0.2.0::gentoo
+# required by app-editors/neovim (argument)
+=dev-lua/mpack-1.0.4 ~amd64
+# required by app-editors/neovim-0.2.0::gentoo[tui]
+# required by app-editors/neovim (argument)
+=dev-libs/libtermkey-0.20 ~amd64
+# required by net-vpn/i2p (argument)
+=net-vpn/i2p-0.9.31 ~amd64
+# required by media-sound/pamix (argument)
+=media-sound/pamix-1.5 ~amd64
+# required by sys-power/thermald (argument)
+=sys-power/thermald-1.6 ~amd64
+# required by dev-lang/nqp-2017.10::gentoo[moar]
+# required by dev-lang/rakudo-2017.10::gentoo
+# required by dev-lang/rakudo (argument)
+=dev-lang/moarvm-2017.10 ~amd64
+# required by dev-lang/rakudo (argument)
+=dev-lang/rakudo-2017.10 ~amd64
+# required by dev-lang/rakudo-2017.10::gentoo
+# required by dev-lang/rakudo (argument)
+=dev-lang/nqp-2017.10 ~amd64
+# required by www-client/torbrowser-launcher (argument)
+=www-client/torbrowser-launcher-0.2.8 ~amd64
+# required by www-client/torbrowser-launcher-0.2.8::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+=dev-python/pyliblzma-0.5.3-r1 ~amd64
+# required by www-client/waterfox-bin (argument)
+=www-client/waterfox-bin-55.2.2 ~amd64
+# required by steam-launcher (argument)
+=games-util/steam-launcher-1.0.0.54-r4 ~amd64
