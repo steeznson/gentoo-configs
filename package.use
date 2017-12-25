@@ -418,8 +418,6 @@ x11-proto/xproto abi_x86_32
 # required by sys-libs/readline-6.3_p8-r3::gentoo
 # required by dev-libs/libpcre-8.41::gentoo[readline]
 >=virtual/libintl-0-r2 abi_x86_32
-
-
 # required by games-util/steam-launcher-1.0.0.54-r4::steam-overlay[steamruntime]
 # required by steam-launcher (argument)
 >=virtual/opengl-7.0-r1 abi_x86_32
