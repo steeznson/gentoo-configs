@@ -163,9 +163,6 @@ bar {
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg &
 
-# Compositing
-exec --no-startup-id xcompmgr &
-
 # Network Manager
 exec --no-startup-id nm-applet &
 
@@ -221,7 +218,3 @@ new_window 1pixel
 
 # point to terminus directory
 exec --no-startup-id xset +fp /usr/share/fonts/terminus/
-
-## i3 gaps
-#gaps inner 5
-#gaps outer 2
