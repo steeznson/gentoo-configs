@@ -167,8 +167,8 @@ exec --no-startup-id sh ~/.fehbg &
 exec --no-startup-id nm-applet &
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
@@ -213,6 +213,7 @@ bindsym $mod+shift+f exec --no-startup-id waterfox-bin
 bindsym $mod+shift+g exec --no-startup-id gummi
 bindsym $mod+shift+m exec --no-startup-id emacs
 bindsym $mod+shift+s exec --no-startup-id steam
+bindsym $mod+shift+p exec --no-startup-id sh ~/Protege/Protege-5.2.0/run.sh
 
 # Remove window header
 new_window 1pixel

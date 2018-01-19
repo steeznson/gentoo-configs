@@ -8,9 +8,7 @@ app-portage/layman sync-plugin-portage git
 dev-lang/ghc binary
 app-editors/emacs libxml2
 sys-libs/ncurses -gpm
-
-## Python
-dev-libs/gobject-introspection python_single_target_python2_7
+net-print/cups -usb
 
 ## Network Manager
 # required by gnome-keyring
@@ -421,3 +419,4 @@ x11-proto/xproto abi_x86_32
 # required by games-util/steam-launcher-1.0.0.54-r4::steam-overlay[steamruntime]
 # required by steam-launcher (argument)
 >=virtual/opengl-7.0-r1 abi_x86_32
+
