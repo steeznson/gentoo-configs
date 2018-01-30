@@ -77,7 +77,7 @@ URxvt.perl-ext-common:  default,matcher
 
 !enabling clickable links:
 
-URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.urlLauncher:      /usr/bin/waterfox-bin
 URxvt.matcher.button:   1 
 
 !urxvt scrolling options and cursor style:

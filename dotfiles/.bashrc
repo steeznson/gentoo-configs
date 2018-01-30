@@ -11,13 +11,11 @@ PS1='[\u@\h \W]\$ '
 
 # Editors
 
-export VISUAL=nvim
+export VISUAL=vim
 
-export EDITOR=nvim
+export EDITOR=vim
 
-alias vi=nvim
-
-alias vim=nvim
+alias vi=vim
 
 # Standalone PHP
 
@@ -36,6 +34,8 @@ alias bbc3='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p'
 alias bbc4='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p'
 
 alias bbc5='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5live_mf_p'
+
+alias bbc5live='mplayer http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_five_live_sports_extra.m3u8'
 
 alias bbc6='mplayer http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 
