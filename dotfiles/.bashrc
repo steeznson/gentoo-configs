@@ -53,3 +53,18 @@ alias weather='curl wttr.in/edinburgh'
 
 alias news='sh ~/News/news_scraper.sh'
 
+# wpa_supplicant
+
+alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+
+# print battery %
+
+alias bat='sh ~/Programming/BitsOfBash/battery.sh'
+
+# Protege
+
+alias protege='sh ~/Protege/Protege-5.2.0/run.sh'
+
+# Keyboard layout
+
+alias kdb='setxkbmap -layout gb'
