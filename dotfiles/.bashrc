@@ -51,5 +51,5 @@ alias inc='xbacklight -inc 10'
 alias dec='xbacklight -dec 10'
 # Wallpaper
 alias wp='sh ~/.fehbg &'
-# Complete setup
+# Initial setup
 alias dwmSetup='quickWPA && xkbd && wp && bat'
