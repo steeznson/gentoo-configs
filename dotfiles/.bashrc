@@ -39,13 +39,17 @@ alias news='sh ~/News/news_scraper.sh'
 # wpa_supplicant
 alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
-## DWM shortcuts
+## dwm shortcuts
 # print battery %
 alias bat='sh ~/Programming/BitsOfBash/battery.sh'
-# Protege
-alias protege='sh ~/Protege/Protege-5.2.0/run.sh'
+# time
+alias hm='sh ~/Programming/BitsOfBash/time.sh'
 # Keyboard layout
-alias kbd='setxkbmap -layout gb'
+alias xkbd='setxkbmap -layout gb'
 # Backlight
 alias inc='xbacklight -inc 10'
 alias dec='xbacklight -dec 10'
+# Wallpaper
+alias wp='sh ~/.fehbg &'
+# Complete setup
+alias dwmSetup='quickWPA && xkbd && wp && bat'
