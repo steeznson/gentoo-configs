@@ -7,6 +7,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# Browser
+export BROWSER=waterfox-bin
 
 # Editors
 export VISUAL=vim
@@ -40,10 +42,8 @@ alias news='sh ~/News/news_scraper.sh'
 alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 ## dwm shortcuts
-# print battery %
-alias bat='sh ~/Programming/BitsOfBash/battery.sh'
-# time
-alias hm='sh ~/Programming/BitsOfBash/time.sh'
+# custom status bar 
+alias status='sh ~/Programming/BitsOfBash/statusbar.sh'
 # Keyboard layout
 alias xkbd='setxkbmap -layout gb'
 # Backlight
@@ -52,4 +52,4 @@ alias dec='xbacklight -dec 10'
 # Wallpaper
 alias wp='sh ~/.fehbg &'
 # Initial setup
-alias dwmSetup='quickWPA && xkbd && wp && bat'
+alias dwmSetup='quickWPA && xkbd && status'
