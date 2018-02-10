@@ -9,6 +9,7 @@ dev-lang/ghc binary
 app-editors/emacs libxml2
 sys-libs/ncurses -gpm
 net-print/cups -usb
+x11-wm/dwm savedconfig
 
 ## Network Manager
 # required by gnome-keyring
