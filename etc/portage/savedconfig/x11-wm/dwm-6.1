@@ -62,6 +62,9 @@ static const char *termcmd[]  = { "st", NULL };
 /* volume */
 static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+/* xbacklight */
+static const char *uplight[] = { "xbacklight", "-inc", "10", NULL }; 
+static const char *downlight[] = { "xbacklight", "-dec", "10", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -90,6 +93,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
 	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
+	{ 0, 		  XF86XK_MonBrightnessUp,     spawn,          {.v = uplight } },
+	{ 0, 		  XF86XK_MonBrightnessDown,    spawn,          {.v = downlight } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
