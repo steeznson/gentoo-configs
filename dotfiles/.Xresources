@@ -2,6 +2,9 @@
 ! Theme: Vain Attempt
 !--------
 
+!window size
+urxvt.geometry: 72x24
+
 !transparency
 urxvt*transparent: true
 urxvt*shading: 15
