@@ -10,11 +10,16 @@ app-editors/emacs libxml2
 sys-libs/ncurses -gpm
 net-print/cups -usb
 x11-wm/dwm savedconfig
+x11-terms/st savedconfig
 
 ## Network Manager
 # required by gnome-keyring
 # required by networkmanager
 app-crypt/pinentry gnome-keyring
+
+## Emulation
+# PPSSPP
+games-emulation/ppsspp sdl -qt5
 
 ## Steam
 dev-db/sqlite abi_x86_32
