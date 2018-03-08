@@ -1,4 +1,4 @@
-## dwm
-exec dwm
-setxkbdmap -layout gb
-sh ~/.fehbg &
+# set keymap and wallpaper
+setxkbmap -layout gb && sh ~/.fehbg
+# dwm
+exec dwm 
