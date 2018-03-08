@@ -44,10 +44,5 @@ alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supp
 # Protege
 alias protege='sh ~/Protege/Protege-5.2.0/run.sh'
 
-## dwm
 # custom status bar 
 alias status='sh ~/Programming/BitsOfBash/statusbar.sh'
-# Keyboard layout
-alias xkbd='setxkbmap -layout gb'
-# Wallpaper
-alias wp='sh ~/.fehbg &'
