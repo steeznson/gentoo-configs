@@ -144,7 +144,7 @@ local open_editor = require "open_editor"
 -- `,ts` to toggle scripts, `,tp` to toggle plugins, `,tr` to reset.
 -- Remove all "enable_scripts" & "enable_plugins" lines from your
 -- domain_props table (in config/globals.lua) as this module will conflict.
-require "noscript"
+local noscript = require "noscript"
 
 local follow_selected = require "follow_selected"
 local go_input = require "go_input"
