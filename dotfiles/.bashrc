@@ -8,7 +8,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Browser
-export BROWSER=waterfox-bin
+export BROWSER=luakit
 
 # Editors
 export VISUAL=vim
