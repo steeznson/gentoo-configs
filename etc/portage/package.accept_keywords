@@ -1,0 +1,32 @@
+## package.accept_keywords
+# required by net-vpn/i2p (argument)
+=net-vpn/i2p-0* ~amd64
+# required by steam-launcher (argument)
+=games-util/steam-launcher-1.0.0.54-r4 ~amd64
+# required by ppsspp (argument)
+=games-emulation/ppsspp-1* ~amd64
+# required by games-emulation/desmume (argument)
+=games-emulation/desmume-0* ~amd64
+# required by sys-power/thermald (argument)
+=sys-power/thermald-1* ~amd64
+# required by dev-lang/rakudo-2018.02.1::gentoo
+# required by dev-lang/rakudo (argument)
+=dev-lang/nqp-2* ~amd64
+# required by dev-lang/nqp-2018.02::gentoo[moar]
+# required by dev-lang/rakudo-2018.02.1::gentoo
+# required by dev-lang/rakudo (argument)
+=dev-lang/moarvm-2* ~amd64
+# required by dev-lang/rakudo (argument)
+=dev-lang/rakudo-2* ~amd64
+# required by www-client/torbrowser-launcher (argument)
+=www-client/torbrowser-launcher-0* ~amd64
+# required by www-client/torbrowser-launcher-0.2.9::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+=dev-python/pyliblzma-0* ~amd64
+# required by luakit www-client
+=media-libs/harfbuzz-1.7.6 ~amd64
+# required by www-client/luakit (argument)
+=www-client/luakit-2017.08.10 ~amd64
+# required by www-client/luakit-2017.08.10::gentoo
+# required by www-client/luakit (argument)
+=dev-lua/luafilesystem-1.6.3 ~amd64

@@ -3,18 +3,18 @@ dev-libs/openssl -bindist
 net-misc/openssh -bindist
 media-libs/mesa -bindist
 sys-libs/ncurses -gpm
-dev-libs/nettle -gmp
 media-libs/harfbuzz icu
+net-print/cups -usb
+>=dev-libs/gmp-6.1.2 abi_x86_32
 
 ## Preferences
 dev-lang/php pdo
 sys-libs/zlib minizip
 app-portage/layman sync-plugin-portage git
-dev-lang/ghc binary
 app-editors/emacs libxml2
-net-print/cups -usb
 x11-wm/dwm savedconfig
 games-emulation/ppsspp sdl -qt5
+media-video/ffmpeg gnutls
 
 ## Steam
 dev-db/sqlite abi_x86_32
@@ -128,8 +128,10 @@ x11-proto/xproto abi_x86_32
 >=virtual/libintl-0-r2 abi_x86_32
 >=virtual/opengl-7.0-r1 abi_x86_32
 
+## luakit
 # required by media-libs/harfbuzz-1.7.6::gentoo[icu]
 # required by net-libs/webkit-gtk-2.18.6::gentoo
 # required by www-client/luakit-2017.08.10::gentoo
 # required by www-client/luakit (argument)
 >=dev-libs/icu-60.2 abi_x86_32
+
