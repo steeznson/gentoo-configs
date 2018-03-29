@@ -146,6 +146,18 @@ local open_editor = require "open_editor"
 -- domain_props table (in config/globals.lua) as this module will conflict.
 local noscript = require "noscript"
 
+-- CTRL-C copy to clipboard
+local modes = require "modes"
+modes.add_binds("normal", {
+    { "<Control-c>", "Copy selected text.", function ()
+        luakit.selection.clipboard = luakit.selection.primary
+    end},
+})
+
+-- Change default Downloads folder
+require "downloads"
+downloads.default_dir = os.getenv("HOME") .. "/Downloads"
+
 local follow_selected = require "follow_selected"
 local go_input = require "go_input"
 local go_next_prev = require "go_next_prev"

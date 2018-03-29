@@ -46,3 +46,9 @@ alias protege='sh ~/Protege/Protege-5.2.0/run.sh'
 
 # custom status bar 
 alias status='sh ~/Programming/BitsOfBash/statusbar.sh'
+
+# word count
+alias wordcount='wc -w'
+
+# download mp3 with youtube-dl
+alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
