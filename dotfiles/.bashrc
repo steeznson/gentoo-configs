@@ -11,9 +11,8 @@ PS1='[\u@\h \W]\$ '
 export BROWSER=luakit
 
 # Editors
-export VISUAL=vim
-export EDITOR=vim
-alias vi=vim
+export VISUAL='emacs -nw'
+export EDITOR='emacs -nw'
 
 # Standalone PHP
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
@@ -41,9 +40,6 @@ alias news='sh ~/News/news_scraper.sh'
 # wpa_supplicant
 alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
-# Protege
-alias protege='sh ~/Protege/Protege-5.2.0/run.sh'
-
 # custom status bar 
 alias status='sh ~/Programming/BitsOfBash/statusbar.sh'
 
@@ -52,3 +48,6 @@ alias wordcount='wc -w'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
+
+# Prevent Wine from adding menu entries and desktop links.
+export WINEDLLOVERRIDES="winemenubuilder.exe=d"
