@@ -3,6 +3,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+(ivy-mode 1) ;; enable ivy-mode
 ;; allow emacs to use gnupg
 (setf epa-pinentry-mode 'loopback)
 (custom-set-variables
@@ -20,7 +21,7 @@
     ("868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "5acb6002127f5d212e2d31ba2ab5503df9cd1baa1200fbb5f57cc49f6da3056d" default)))
  '(package-selected-packages
    (quote
-    (go emms dired-ranger math-symbols eros circe rainbow-mode evil elisp-sandbox latex-extra function-args ecb better-defaults sudoku jdee pdf-tools latex-preview-pane auto-complete dired-sidebard org-edna)))
+    (emms dired-ranger function-args ecb better-defaults auto-complete dired-sidebard org-edna)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -36,11 +37,8 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-;; irc
-(setq circe-network-options
-      `(("Freenode"
-         :nick "steeznson")))
 ;; emms media player
 (require 'emms-setup)
         (emms-standard)
         (emms-default-players)
+(setq emms-source-file-default-directory "~/Music/")
