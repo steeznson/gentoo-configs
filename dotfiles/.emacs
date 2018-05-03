@@ -28,17 +28,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "xos4 Terminus" :foundry "xos4" :slant normal :weight normal :height 90 :width normal)))))
+ '(default ((t (:family "Inconsolata" :foundry "PfEd" :slant normal :weight normal :height 113 :width normal)))))
 ;; set default browser
 (setq browse-url-generic-program   
              (executable-find (getenv "BROWSER"))   
 	      browse-url-browser-function 'browse-url-generic)
 ;; package manager repos
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 ;; emms media player
 (require 'emms-setup)
         (emms-standard)
         (emms-default-players)
 (setq emms-source-file-default-directory "~/Music/")
+(global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
+(global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
+(global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
+(global-set-key (kbd "<XF86AudioNext>") 'emms-next)
