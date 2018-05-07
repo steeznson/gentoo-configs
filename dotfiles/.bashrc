@@ -3,16 +3,21 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+case $- in
+    *i*) ;;
+    *) return;;
+esac
+
+# Defaults
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Browser
-export BROWSER=luakit
+export BROWSER=qutebrowser
 
 # Editors
-export VISUAL='emacs -nw'
-export EDITOR='emacs -nw'
+export VISUAL='vim'
+export EDITOR='vim'
 
 # Standalone PHP
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
@@ -28,8 +33,8 @@ alias bbc5live='mpv http://a.files.bbci.co.uk/media/live/manifesto/audio/simulca
 alias bbc6='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 
 # Shutdown
-alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
 
 # Weather
 alias weather='curl wttr.in/edinburgh'
@@ -51,3 +56,6 @@ alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
 
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
+# launch emacs with dired in terminal
+alias dired='emacs -nw .'

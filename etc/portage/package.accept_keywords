@@ -5,8 +5,6 @@
 =games-util/steam-launcher-1.0.0.54-r4 ~amd64
 # required by ppsspp (argument)
 =games-emulation/ppsspp-1* ~amd64
-# required by games-emulation/desmume (argument)
-=games-emulation/desmume-0* ~amd64
 # required by sys-power/thermald (argument)
 =sys-power/thermald-1* ~amd64
 # required by dev-lang/rakudo-2018.02.1::gentoo
@@ -23,10 +21,8 @@
 # required by www-client/torbrowser-launcher-0.2.9::torbrowser
 # required by www-client/torbrowser-launcher (argument)
 =dev-python/pyliblzma-0* ~amd64
-# required by luakit www-client
-=media-libs/harfbuzz-1.7.6 ~amd64
-# required by www-client/luakit (argument)
-=www-client/luakit-2017.08.10 ~amd64
-# required by www-client/luakit-2017.08.10::gentoo
-# required by www-client/luakit (argument)
-=dev-lua/luafilesystem-1.6.3 ~amd64
+# required by qutebrowser (argument)
+=www-client/qutebrowser-1.3.0 ~amd64
+# required by www-client/qutebrowser-1.3.0::gentoo
+# required by qutebrowser (argument)
+=dev-python/pypeg2-2.15.2 ~amd64
