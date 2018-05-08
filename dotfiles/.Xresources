@@ -7,11 +7,11 @@ urxvt.geometry: 72x24
 
 !transparency
 urxvt*transparent: true
-urxvt*shading: 4
+urxvt*shading: 5
 
 !urxvt colours
-URxvt.background: #d3d3d3
-URxvt.foreground: #ffffff
+URxvt.background: #000000
+URxvt.foreground: #d3d3d3
 
 !Black + DarkGrey
 *color0:  #282828
