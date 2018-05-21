@@ -21,7 +21,7 @@
     ("868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "5acb6002127f5d212e2d31ba2ab5503df9cd1baa1200fbb5f57cc49f6da3056d" default)))
  '(package-selected-packages
    (quote
-    (emms dired-ranger function-args ecb better-defaults auto-complete dired-sidebard org-edna)))
+    (kotlin-mode ivy emms dired-ranger ecb better-defaults dired-sidebard org-edna)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -45,3 +45,4 @@
 (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
 (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
 (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
+;;
