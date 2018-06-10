@@ -7,15 +7,6 @@
 =games-emulation/ppsspp-1* ~amd64
 # required by sys-power/thermald (argument)
 =sys-power/thermald-1* ~amd64
-# required by dev-lang/rakudo-2018.02.1::gentoo
-# required by dev-lang/rakudo (argument)
-=dev-lang/nqp-2* ~amd64
-# required by dev-lang/nqp-2018.02::gentoo[moar]
-# required by dev-lang/rakudo-2018.02.1::gentoo
-# required by dev-lang/rakudo (argument)
-=dev-lang/moarvm-2* ~amd64
-# required by dev-lang/rakudo (argument)
-=dev-lang/rakudo-2* ~amd64
 # required by www-client/torbrowser-launcher (argument)
 =www-client/torbrowser-launcher-0* ~amd64
 # required by www-client/torbrowser-launcher-0.2.9::torbrowser
@@ -26,5 +17,19 @@
 # required by www-client/qutebrowser-1.3.0::gentoo
 # required by qutebrowser (argument)
 =dev-python/pypeg2-2.15.2 ~amd64
-# required by dev-lang/kotlin-bin (argument)
-=dev-lang/kotlin-bin-1* ~amd64
+# required by games-fps/darkplaces (argument)
+=games-fps/darkplaces-20140513-r1 ~amd64
+# required by games-fps/prboom (argument)
+=games-fps/prboom-2.5.0-r1 ~amd64
+# required by dev-lang/rakudo-2018.05::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-lang/nqp-2018.05 ~amd64
+# required by @selected
+# required by @world (argument)
+=dev-lang/rakudo-2018.05 ~amd64
+# required by dev-lang/nqp-2018.05::gentoo[moar]
+# required by dev-lang/rakudo-2018.05::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-lang/moarvm-2018.05 ~amd64

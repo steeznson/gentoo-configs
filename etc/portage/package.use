@@ -16,6 +16,7 @@ app-editors/emacs libxml2
 x11-wm/dwm savedconfig
 games-emulation/ppsspp sdl -qt5
 media-video/ffmpeg gnutls
+app-arch/p7zip -wxwidgets
 
 ## Pulseaudio
 >=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio

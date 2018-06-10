@@ -60,11 +60,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 /* volume */
-static const char *upvol[] = { "amixer", "sset", "Master", "10+", NULL };
-static const char *downvol[] = { "amixer", "sset", "Master", "10-", NULL };
+static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 /* xbacklight */
 static const char *uplight[] = { "xbacklight", "-inc", "10", NULL }; 
 static const char *downlight[] = { "xbacklight", "-dec", "10", NULL };
+/* emacs */
+static const char *launch_emacs[] = { "emacs", "--debug-init", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -105,6 +107,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,		XK_e,	   spawn,	   {.v = launch_emacs } },
 };
 
 /* button definitions */

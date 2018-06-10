@@ -72,7 +72,7 @@ URxvt.color250: #d5c4a1
 !urxvt fonts: 
 
 URxvt*font: xft:xos4 Terminus:size=10
-URxvt*boldFont: xft:xos4 Terminus:bold:size=10
+URxvt*boldFont: xft:xos4 Terminus:size=10
 
 !urxvt extensions:
 
