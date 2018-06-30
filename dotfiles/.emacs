@@ -31,5 +31,15 @@
 (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
 (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
 (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
+;; comment/uncomment all region
+(defun comment-or-uncomment-region-or-line ()
+    "Comments or uncomments the region or the current line if there's no active region."
+    (interactive)
+    (let (beg end)
+        (if (region-active-p)
+            (setq beg (region-beginning) end (region-end))
+            (setq beg (line-beginning-position) end (line-end-position)))
+        (comment-or-uncomment-region beg end)))
+(global-set-key (kbd "C-x a") 'comment-or-uncomment-region-or-line)
 ;;
 
