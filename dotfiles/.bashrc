@@ -8,15 +8,6 @@ case $- in
     *) return;;
 esac
 
-# Start statusbar
-while true; do
-	DATE="$( date '+%F %R' )"
-	CAP="$(df -H | grep -vE '^Filesystem|devtmpfs|tmpfs|shm|cgroup_root|none' | awk '{print$4 " " $1}')"
-	BAT="$( cat /sys/class/power_supply/BAT0/capacity )"
-	xsetroot -name "$( echo $DATE $CAP $BAT% )"
-    	sleep 1m;    # Update time every minute
-done &
-
 # Defaults
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
