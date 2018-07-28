@@ -1,8 +1,6 @@
 ## package.accept_keywords
 # required by net-vpn/i2p (argument)
 =net-vpn/i2p-0* ~amd64
-# required by steam-launcher (argument)
-=games-util/steam-launcher-1.0.0.54-r4 ~amd64
 # required by ppsspp (argument)
 =games-emulation/ppsspp-1* ~amd64
 # required by sys-power/thermald (argument)
@@ -12,24 +10,12 @@
 # required by www-client/torbrowser-launcher-0.2.9::torbrowser
 # required by www-client/torbrowser-launcher (argument)
 =dev-python/pyliblzma-0* ~amd64
-# required by qutebrowser (argument)
-=www-client/qutebrowser-1.3.0 ~amd64
-# required by www-client/qutebrowser-1.3.0::gentoo
-# required by qutebrowser (argument)
-=dev-python/pypeg2-2.15.2 ~amd64
-# required by games-fps/darkplaces (argument)
-=games-fps/darkplaces-20140513-r1 ~amd64
 # required by games-fps/prboom (argument)
 =games-fps/prboom-2.5.0-r1 ~amd64
-# required by dev-lang/rakudo-2018.05::gentoo
-# required by @selected
-# required by @world (argument)
-=dev-lang/nqp-2018.05 ~amd64
-# required by @selected
-# required by @world (argument)
-=dev-lang/rakudo-2018.05 ~amd64
-# required by dev-lang/nqp-2018.05::gentoo[moar]
-# required by dev-lang/rakudo-2018.05::gentoo
-# required by @selected
-# required by @world (argument)
-=dev-lang/moarvm-2018.05 ~amd64
+# required by games-fps/xonotic-0.8.2::gentoo
+# required by games-fps/xonotic (argument)
+=dev-libs/d0_blind_id-1.0 ~amd64
+# required by games-fps/xonotic (argument)
+=games-fps/xonotic-0.8.2 ~amd64
+# required by app-text/texlive-core-2017-r4::gentoo
+=dev-libs/mpfr-3.1.5_p2 ~amd64
