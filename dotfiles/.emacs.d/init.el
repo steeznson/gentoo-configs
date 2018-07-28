@@ -11,7 +11,8 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (django-mode projectile flycheck auto-complete pdf-tools elpy helm wiki-summary sudoku ivy emms ecb dired-ranger better-defaults)))
+    (git sicp django-mode projectile flycheck auto-complete pdf-tools elpy helm wiki-summary sudoku ivy emms ecb dired-ranger better-defaults)))
+ '(scheme-program-name "guile")
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -41,5 +42,6 @@
             (setq beg (line-beginning-position) end (line-end-position)))
         (comment-or-uncomment-region beg end)))
 (global-set-key (kbd "C-x a") 'comment-or-uncomment-region-or-line)
-;;
-
+;; untabify shortcut
+(global-set-key (kbd "C-x t") 'untabify)
+;; 

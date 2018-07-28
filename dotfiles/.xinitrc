@@ -1,8 +1,7 @@
-# set rice, keymap, wallpaper
-xrdb -merge /home/james/.Xresources 
+# set keymap, wallpaper
 setxkbmap -layout gb 
 sh /home/james/.fehbg 
-# Start statusbar
+# statusbar
 while true; do
 	DATE="$( date '+%F %R' )"
 	CAP="$(df -H | grep -vE '^Filesystem|devtmpfs|tmpfs|shm|cgroup_root|none' | awk '{print$4 " " $1}')"

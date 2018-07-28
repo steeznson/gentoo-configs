@@ -13,7 +13,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Browser
-export BROWSER=qutebrowser
+export BROWSER=surf
 
 # Editors
 export VISUAL='vim'
