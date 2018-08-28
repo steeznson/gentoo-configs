@@ -17,5 +17,5 @@
 =dev-libs/d0_blind_id-1.0 ~amd64
 # required by games-fps/xonotic (argument)
 =games-fps/xonotic-0.8.2 ~amd64
-# required by app-text/texlive-core-2017-r4::gentoo
-=dev-libs/mpfr-3.1.5_p2 ~amd64
+# required by snes9x (argument)
+=games-emulation/snes9x-1.56 ~amd64

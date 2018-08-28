@@ -1,7 +1,7 @@
-# set keymap, wallpaper
+## set keymap, wallpaper
 setxkbmap -layout gb 
 sh /home/james/.fehbg 
-# statusbar
+## statusbar
 while true; do
 	DATE="$( date '+%F %R' )"
 	CAP="$(df -H | grep -vE '^Filesystem|devtmpfs|tmpfs|shm|cgroup_root|none' | awk '{print$4 " " $1}')"
@@ -9,5 +9,5 @@ while true; do
 	xsetroot -name "$( echo $DATE $CAP $BAT% )"
     	sleep 1m;    # Update time every minute
 done &
-# dwm
-exec dwm 
+## dwm
+exec dwm

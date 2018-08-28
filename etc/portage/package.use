@@ -15,32 +15,35 @@ app-portage/layman sync-plugin-portage git
 app-editors/emacs libxml2
 x11-wm/dwm savedconfig
 x11-terms/st savedconfig
+x11-misc/slock savedconfig
 games-emulation/ppsspp sdl -qt5
 media-video/ffmpeg gnutls
 app-arch/p7zip -wxwidgets
 
 ## 32bit Graphics
 media-libs/mesa abi_x86_32
->=dev-libs/expat-2.2.5 abi_x86_32
->=sys-libs/zlib-1.2.11-r1 abi_x86_32
->=x11-libs/libX11-1.6.5-r1 abi_x86_32
->=x11-libs/libxshmfence-1.3-r1 abi_x86_32
->=x11-libs/libXdamage-1.1.4-r2 abi_x86_32
->=x11-libs/libXext-1.3.3-r1 abi_x86_32
->=x11-libs/libxcb-1.13 abi_x86_32
->=x11-libs/libXfixes-5.0.3-r1 abi_x86_32
->=x11-libs/libdrm-2.4.91 abi_x86_32
->=sys-devel/llvm-5.0.2 abi_x86_32
->=sys-libs/ncurses-6.1-r2 abi_x86_32
->=x11-libs/libpciaccess-0.14 abi_x86_32
->=dev-libs/libpthread-stubs-0.4 abi_x86_32
->=x11-libs/libXau-1.0.8-r1 abi_x86_32
->=x11-libs/libXdmcp-1.1.2-r2 abi_x86_32
->=x11-base/xcb-proto-1.13 abi_x86_32
->=virtual/libffi-3.0.13-r1 abi_x86_32
->=x11-libs/libXxf86vm-1.1.4-r1 abi_x86_32
->=dev-libs/libffi-3.2.1 abi_x86_32
+dev-libs/expat abi_x86_32
+sys-libs/zlib abi_x86_32
+x11-libs/libX11 abi_x86_32
+x11-libs/libxshmfence abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-libs/libXext abi_x86_32
+x11-libs/libxcb abi_x86_32
+x11-libs/libXfixes abi_x86_32
+x11-libs/libdrm abi_x86_32
+sys-devel/llvm abi_x86_32
+sys-libs/ncurses abi_x86_32
+x11-libs/libpciaccess abi_x86_32
+dev-libs/libpthread-stubs abi_x86_32
+x11-libs/libXau abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+x11-base/xcb-proto abi_x86_32
+virtual/libffi abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
+dev-libs/libffi abi_x86_32
 
 ## Pulseaudio
 >=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio
 
+# Aircrack-ng
+>=net-wireless/lorcon-0.0_p20150109 python
