@@ -67,6 +67,8 @@ static const char *uplight[] = { "xbacklight", "-inc", "10", NULL };
 static const char *downlight[] = { "xbacklight", "-dec", "10", NULL };
 /* emacs */
 static const char *launch_emacs[] = { "emacs", "--debug-init", NULL };
+/* firefox */
+static const char *launch_firefox[] = { "firefox-bin", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -82,7 +84,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+ 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
@@ -96,7 +98,7 @@ static Key keys[] = {
 	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
 	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0, 		  XF86XK_MonBrightnessUp,  spawn,          {.v = uplight } },
-	{ 0, 		  XF86XK_MonBrightnessDown,    spawn,          {.v = downlight } },
+	{ 0, 		  XF86XK_MonBrightnessDown,    spawn,      {.v = downlight } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -108,6 +110,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,		XK_e,	   spawn,	   {.v = launch_emacs } },
+	{ MODKEY|ShiftMask, 		XK_f,	   spawn,	   {.v = launch_firefox } },
 };
 
 /* button definitions */

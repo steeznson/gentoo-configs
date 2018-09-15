@@ -14,7 +14,6 @@ sys-libs/zlib minizip
 app-portage/layman sync-plugin-portage git
 app-editors/emacs libxml2
 x11-wm/dwm savedconfig
-x11-terms/st savedconfig
 x11-misc/slock savedconfig
 games-emulation/ppsspp sdl -qt5
 media-video/ffmpeg gnutls
@@ -45,5 +44,3 @@ dev-libs/libffi abi_x86_32
 ## Pulseaudio
 >=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio
 
-# Aircrack-ng
->=net-wireless/lorcon-0.0_p20150109 python

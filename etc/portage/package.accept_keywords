@@ -10,12 +10,7 @@
 # required by www-client/torbrowser-launcher-0.2.9::torbrowser
 # required by www-client/torbrowser-launcher (argument)
 =dev-python/pyliblzma-0* ~amd64
-# required by games-fps/prboom (argument)
-=games-fps/prboom-2.5.0-r1 ~amd64
-# required by games-fps/xonotic-0.8.2::gentoo
-# required by games-fps/xonotic (argument)
-=dev-libs/d0_blind_id-1.0 ~amd64
-# required by games-fps/xonotic (argument)
-=games-fps/xonotic-0.8.2 ~amd64
-# required by snes9x (argument)
-=games-emulation/snes9x-1.56 ~amd64
+# required by =net-misc/chrony-3.4_pre1-r2 (argument)
+=net-misc/chrony-3.4_pre1-r2 ~amd64
+# required by games-server/steamcmd (argument)
+=games-server/steamcmd-1.0-r1 ~amd64

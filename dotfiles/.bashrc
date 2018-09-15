@@ -33,23 +33,17 @@ alias bbc5x='mpv http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/
 alias bbc6='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 
 # Shutdown
-alias poweroff='sudo poweroff'
-alias reboot='sudo reboot'
+alias poweroff='doas poweroff'
+alias reboot='doas reboot'
 
 # Weather
 alias weather='curl wttr.in/edinburgh'
 
 # News
-alias news='sh ~/News/news_scraper.sh'
+alias news='sh ~/news/news_scraper.sh'
 
 # wpa_supplicant
-alias quickWPA='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+alias quickWPA='doas wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
-
-# Prevent Wine from adding menu entries and desktop links.
-export WINEDLLOVERRIDES="winemenubuilder.exe=d"
-
-# launch emacs with dired in terminal
-alias dired='emacs -nw .'

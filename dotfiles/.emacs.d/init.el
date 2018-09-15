@@ -66,3 +66,8 @@
 (add-hook 'window-setup-hook 'delete-other-windows)
 ;; No more typing the whole yes or no. Just y or n will do.
 (fset 'yes-or-no-p 'y-or-n-p) 
+;; disable auto-indent
+(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+;; put password in minibuffer
+(global-set-key (kbd "C-x p") 'send-invisible)
+;;
