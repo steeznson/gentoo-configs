@@ -7,6 +7,8 @@ media-libs/harfbuzz icu
 net-print/cups -usb
 >=dev-libs/gmp-6.1.2 abi_x86_32
 sys-auth/pambase consolekit
+>=dev-lang/python-2.7.5 sqlite
+app-text/asciidoc python_single_target_python2_7
 
 ## Preferences
 dev-lang/php pdo
@@ -14,10 +16,10 @@ sys-libs/zlib minizip
 app-portage/layman sync-plugin-portage git
 app-editors/emacs libxml2
 x11-wm/dwm savedconfig
-x11-misc/slock savedconfig
-games-emulation/ppsspp sdl -qt5
+games-emulation/ppsspp qt5 -sdl
 media-video/ffmpeg gnutls
 app-arch/p7zip -wxwidgets
+games-emulation/mgba sdl -qt5
 
 ## 32bit Graphics
 media-libs/mesa abi_x86_32
@@ -40,7 +42,40 @@ x11-base/xcb-proto abi_x86_32
 virtual/libffi abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
 dev-libs/libffi abi_x86_32
+virtual/opengl abi_x86_32
 
 ## Pulseaudio
 >=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio
+
+## torbrowser-launcher
+>=app-crypt/gpgme-1.11.1 python
+
+# required by media-libs/mesa-18.2.5::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by media-libs/glu-9.0.0-r1::gentoo
+# required by virtual/glu-9.0-r2::gentoo
+# required by media-libs/freeglut-3.0.0::gentoo
+# required by app-text/mupdf-1.14.0-r2::gentoo[opengl]
+# required by net-print/cups-filters-1.20.4::gentoo[pdf]
+# required by net-print/cups-2.2.7::gentoo
+# required by x11-libs/gtk+-2.24.32-r1::gentoo
+# required by x11-themes/gtk-engines-adwaita-3.22.3::gentoo
+>=x11-libs/libXrandr-1.5.1-r1 abi_x86_32
+# required by x11-libs/libXrandr-1.5.1-r1::gentoo
+# required by app-editors/emacs-26.1-r3::gentoo[X]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXrender-0.9.10-r1 abi_x86_32
+# required by sys-devel/llvm-6.0.1::gentoo[xml]
+# required by media-libs/mesa-18.2.5::gentoo[-video_cards_radeon,llvm,-video_cards_radeonsi,-video_cards_r600,-opencl]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by media-libs/glu-9.0.0-r1::gentoo
+# required by virtual/glu-9.0-r2::gentoo
+# required by media-libs/freeglut-3.0.0::gentoo
+# required by app-text/mupdf-1.14.0-r2::gentoo[opengl]
+# required by net-print/cups-filters-1.20.4::gentoo[pdf]
+# required by net-print/cups-2.2.7::gentoo
+# required by x11-libs/gtk+-2.24.32-r1::gentoo
+# required by x11-themes/gtk-engines-adwaita-3.22.3::gentoo
+>=dev-libs/libxml2-2.9.8 abi_x86_32
 

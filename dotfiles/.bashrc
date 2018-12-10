@@ -17,7 +17,7 @@ export BROWSER='firefox-bin'
 
 # Editors
 export VISUAL='vim'
-export EDITOR='vim'
+export EDITOR='ex'
 
 # Standalone PHP
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
@@ -40,10 +40,11 @@ alias reboot='doas reboot'
 alias weather='curl wttr.in/edinburgh'
 
 # News
-alias news='sh ~/news/news_scraper.sh'
+alias news='sh /home/james/programming/BitsOfBash/news_scraper.sh'
 
 # wpa_supplicant
 alias quickWPA='doas wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
+

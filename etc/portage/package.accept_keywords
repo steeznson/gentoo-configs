@@ -5,12 +5,7 @@
 =games-emulation/ppsspp-1* ~amd64
 # required by sys-power/thermald (argument)
 =sys-power/thermald-1* ~amd64
-# required by www-client/torbrowser-launcher (argument)
-=www-client/torbrowser-launcher-0* ~amd64
-# required by www-client/torbrowser-launcher-0.2.9::torbrowser
-# required by www-client/torbrowser-launcher (argument)
-=dev-python/pyliblzma-0* ~amd64
-# required by =net-misc/chrony-3.4_pre1-r2 (argument)
-=net-misc/chrony-3.4_pre1-r2 ~amd64
-# required by games-server/steamcmd (argument)
-=games-server/steamcmd-1.0-r1 ~amd64
+# required by torbrowser-launcher (argument)
+=www-client/torbrowser-launcher-0.3.1 ~amd64
+# required by steam-launcher (argument)
+=games-util/steam-launcher-1.0.0.56 ~amd64
