@@ -48,3 +48,5 @@ alias quickWPA='doas wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supp
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
 
+# temporily change ownership of backlight
+alias bl='doas chown james:james /sys/devices/pci0000\:00/0000\:00\:02.0/drm/card0/card0-LVDS-1/intel_backlight/brightness'
