@@ -67,7 +67,7 @@ static const char *downlight[] = { "xbacklight", "-dec", "10", NULL };
 /* emacs */
 static const char *launch_emacs[] = { "emacs", "--debug-init", NULL };
 /* firefox */
-static const char *launch_firefox[] = { "firefox-bin", NULL };
+static const char *launch_firefox[] = { "firefox", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
