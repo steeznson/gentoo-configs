@@ -13,7 +13,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Browser
-export BROWSER='firefox'
+export BROWSER='firefox-bin'
 
 # Editors
 export VISUAL='vim'
