@@ -1,4 +1,5 @@
 (package-initialize)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -8,12 +9,12 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-enabled-themes (quote (wombat)))
  '(ecb-options-version "2.50")
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (emms elpy django-mode django-snippets flycheck-pycheckers flycheck-pyflakes jedi pylint python-mode pdf-tools irony ac-html clang-format doom eshell-did-you-mean eshell-git-prompt evil fuzzy indent-tools nasm-mode ssh web-beautify xml+ color-identifiers-mode company-c-headers magit flycheck-clangcheck yaml-mode projectile-codesearch nov git sicp flycheck auto-complete helm wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (better-shell clojure-mode fancy-battery highlight jdee minesweeper olivetti origami prodigy pulseaudio-control rustic ssh-tunnels term+ treemacs djvu flycheck-clang-tidy exwm emms elpy django-mode django-snippets flycheck-pycheckers flycheck-pyflakes jedi pylint python-mode pdf-tools irony ac-html clang-format doom eshell-did-you-mean eshell-git-prompt evil fuzzy indent-tools nasm-mode ssh web-beautify xml+ company-c-headers magit flycheck-clangcheck yaml-mode projectile-codesearch nov git sicp flycheck auto-complete helm wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(scheme-program-name "guile")
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
@@ -22,10 +23,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Inconsolata" :foundry "PfEd" :slant normal :weight normal :height 120 :width normal)))))
+ '(default ((t (:family "Liberation Mono" :foundry "1ASC" :slant normal :weight normal :height 98 :width normal)))))
 
 ;; enable ivy-mode
-;;(ivy-mode 1)
+(ivy-mode 1)
 
 ;; allow emacs to use gnupg
 (setf epa-pinentry-mode 'loopback)
@@ -128,8 +129,47 @@
 (emms-all)
 (emms-default-players)
 (setq emms-source-file-default-directory "~/music/")
+(global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
+(global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
+(global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
+(global-set-key (kbd "<XF86AudioNext>") 'emms-next)
 
+;; exwm
+(require 'exwm)
+(require 'exwm-config)
+(exwm-config-default)
+(setq exwm-workspace-number 4)
 
+;; Turn on `display-time-mode' if you don't use an external bar.
+(setq display-time-default-load-average nil)
+(display-time-mode t)
 
+;; Display battery
+(display-battery-mode 1)
 
+;; Set backlight brightness
+(defun bright-up()
+  (interactive)
+  (shell-command "xbacklight -inc 10"))
+(defun bright-down()
+  (interactive)
+  (shell-command "xbacklight -dec 10"))
+(global-set-key 
+ (kbd "<XF86MonBrightnessUp>") 'bright-up)
+(global-set-key 
+ (kbd "<XF86MonBrightnessDown>") 'bright-down)
 
+;; Enable volume controls
+(defun volume-up()
+  (interactive)
+  (shell-command "pactl set-sink-volume 0 +5%"))
+(defun volume-down()
+  (interactive)
+  (shell-command "pactl set-sink-volume 0 -5%"))
+(global-set-key 
+ (kbd "<XF86AudioRaiseVolume>") 'volume-up)
+(global-set-key 
+ (kbd "<XF86AudioLowerVolume>") 'volume-down)
+
+;; toggle linum-mode
+(global-set-key (kbd "C-x /") linum-mode)
