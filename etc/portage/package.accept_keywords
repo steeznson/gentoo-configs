@@ -1,18 +1,11 @@
 ## package.accept_keywords
 # required by net-vpn/i2p (argument)
-=net-vpn/i2p-0* ~amd64
+net-vpn/i2p ~amd64
 # required by ppsspp (argument)
-=games-emulation/ppsspp-1* ~amd64
+games-emulation/ppsspp ~amd64
 # required by sys-power/thermald (argument)
-=sys-power/thermald-1* ~amd64
+sys-power/thermald ~amd64
 # required by torbrowser-launcher (argument)
-=www-client/torbrowser-launcher-0.3.1 ~amd64
-# required by steam-launcher (argument)
-=games-util/steam-launcher-1.0.0.56 ~amd64
+www-client/torbrowser-launcher ~amd64
 # required to prevent chrony hang on boot
-=net-misc/chrony-3.4 ~amd64
-# required by app-laptop/tpacpi-bat-3.1::gentoo
-# required by app-laptop/tpacpi-bat (argument)
-=sys-power/acpi_call-3.17 ~amd64
-# required by app-laptop/tpacpi-bat (argument)
-=app-laptop/tpacpi-bat-3.1 ~amd64
+net-misc/chrony ~amd64 

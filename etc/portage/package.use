@@ -16,7 +16,6 @@ dev-lang/php pdo
 sys-libs/zlib minizip
 app-portage/layman sync-plugin-portage git
 app-editors/emacs libxml2 imagemagick
-x11-wm/dwm savedconfig
 games-emulation/ppsspp qt5 libav -system-ffmpeg -sdl
 media-video/ffmpeg gnutls
 app-arch/p7zip -wxwidgets
@@ -25,7 +24,7 @@ games-emulation/mgba -qt5
 ## Pulseaudio
 >=media-plugins/alsa-plugins-1.1.1-r1 pulseaudio
 
-## torbrowser-launcher
+## TorBrowser
 >=app-crypt/gpgme-1.11.1 python
 
 ## 32bit Graphics
@@ -53,4 +52,3 @@ virtual/opengl abi_x86_32
 x11-libs/libXrandr abi_x86_32
 x11-libs/libXrender abi_x86_32
 dev-libs/libxml2 abi_x86_32
-
