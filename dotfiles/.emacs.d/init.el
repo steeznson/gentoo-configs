@@ -13,7 +13,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu exwm emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(scheme-program-name "guile")
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
@@ -95,12 +95,6 @@
 (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
 (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
 (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
-
-;; X Window Manager
-(require 'exwm)
-(require 'exwm-config)
-(exwm-config-default)
-(setq exwm-workspace-number 4)
 
 ;; Mode Line Config
 (setq display-time-default-load-average nil)
