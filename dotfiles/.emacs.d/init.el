@@ -107,12 +107,12 @@
 (display-time-mode t)
 (display-battery-mode 1)
 (setq-default mode-line-format
-     '("μ:%m"
-       "  β:%b"
-       "  λ:%l"
+     '("Λ:%m"
+       "  Π:%b"
+       "  ω:%l"
        "  τ:"
        display-time-string
-       "  π:"
+       "  Δ:"
        battery-mode-line-string))
 
 ;; Custom Functions
