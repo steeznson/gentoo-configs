@@ -1,11 +1,8 @@
 ## package.accept_keywords
-# required by net-vpn/i2p (argument)
 net-vpn/i2p ~amd64
-# required by ppsspp (argument)
 games-emulation/ppsspp ~amd64
-# required by sys-power/thermald (argument)
 sys-power/thermald ~amd64
-# required by torbrowser-launcher (argument)
 www-client/torbrowser-launcher ~amd64
-# required to prevent chrony hang on boot
 net-misc/chrony ~amd64 
+x11-themes/arc-theme ~amd64
+games-util/steam-launcher ~amd64

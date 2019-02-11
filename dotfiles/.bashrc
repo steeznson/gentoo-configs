@@ -12,9 +12,6 @@ esac
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# Browser
-export BROWSER='firefox-bin'
-
 # Editors
 export VISUAL='vim'
 export EDITOR='ex'
@@ -32,10 +29,6 @@ alias bbc5='mpv http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/h
 alias bbc5x='mpv http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_five_live_sports_extra.m3u8'
 alias bbc6='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 
-# Shutdown
-alias poweroff='doas poweroff'
-alias reboot='doas reboot'
-
 # Weather
 alias weather='curl wttr.in/edinburgh'
 
@@ -43,10 +36,13 @@ alias weather='curl wttr.in/edinburgh'
 alias news='sh /home/james/programming/BitsOfBash/news_scraper.sh'
 
 # wpa_supplicant
-alias quickWPA='doas wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+alias quickWPA='wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
 
 # temporily change ownership of backlight
-alias bl='doas chown james:james /sys/devices/pci0000\:00/0000\:00\:02.0/drm/card0/card0-LVDS-1/intel_backlight/brightness'
+alias bl='chown james:james /sys/devices/pci0000\:00/0000\:00\:02.0/drm/card0/card0-LVDS-1/intel_backlight/brightness'
+
+# show battery % remaining
+alias battery='cat /sys/class/power_supply/BAT0/capacity'

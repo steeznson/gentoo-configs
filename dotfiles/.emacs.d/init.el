@@ -9,12 +9,13 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wombat)))
+ '(display-battery-mode t)
+ '(display-time-mode t)
  '(ecb-options-version "2.50")
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
- '(scheme-program-name "guile")
+    (irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -22,7 +23,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Liberation Mono" :foundry "1ASC" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
 
 ;; Packages repo
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -69,6 +70,7 @@
 (setq c-basic-offset 4)      ;; 4-space indent
 (add-hook 'c-mode-common-hook 'company-mode)
 (add-hook 'c-mode-common-hook 'linum-mode)
+(add-hook 'c-mode-common-hook 'irony-mode)
 ;; (Conditional) C/C++ Keybinds
 (add-hook 'c-mode-common-hook
           (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
