@@ -16,6 +16,9 @@ PS1='[\u@\h \W]\$ '
 export VISUAL='vim'
 export EDITOR='ex'
 
+# Default Browser
+export BROWSER='firefox-bin'
+
 # Standalone PHP
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
 
@@ -40,9 +43,6 @@ alias quickWPA='wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplican
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
-
-# temporily change ownership of backlight
-alias bl='chown james:james /sys/devices/pci0000\:00/0000\:00\:02.0/drm/card0/card0-LVDS-1/intel_backlight/brightness'
 
 # show battery % remaining
 alias battery='cat /sys/class/power_supply/BAT0/capacity'

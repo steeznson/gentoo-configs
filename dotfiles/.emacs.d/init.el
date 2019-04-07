@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -53,6 +53,7 @@
 
 ;; Global Modes
 (ivy-mode 1)
+(global-undo-tree-mode 1)
 
 ;; Eww Browser
 (setq eww-download-directory "~/downloads/") ;; download dir
@@ -87,6 +88,9 @@
 (add-hook 'python-mode-hook 'linum-mode)
 (add-hook 'python-mode-hook 'company-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)
+
+;; Rust development configs
+(add-hook 'rust-mode-hook 'linum-mode)
 
 ;; Media Player
 (require 'emms-setup)
@@ -132,6 +136,13 @@
 (defun bright-down()
   (interactive)
   (shell-command "xbacklight -dec 10"))
+(defun remove-all-specified-elements (element-tag)
+  (save-excursion
+     (let ((case-fold-search nil))
+       (while (search-forward-regexp (concat "<" element-tag "[^\\>]*>"))
+     (delete-region
+      (match-beginning 0)
+      (search-forward (concat "</" element-tag ">")))))))
 
 ;; Shortcuts
 (global-set-key (kbd "C-x /") 'linum-mode) ;;toggle linum-mode
@@ -143,3 +154,9 @@
 (global-set-key (kbd "<XF86AudioLowerVolume>") 'volume-down) ;;lower volume
 (global-set-key (kbd "<XF86MonBrightnessUp>") 'bright-up) ;;raise brightness
 (global-set-key (kbd "<XF86MonBrightnessDown>") 'bright-down) ;;lower brightness
+(global-set-key
+ (kbd "C-x n C-x t")
+ (lambda()
+   (interactive)
+   (remove-all-specified-elements
+    (read-string "Enter the element you wish to destroy: ")))) ;;destroy all undesired elements

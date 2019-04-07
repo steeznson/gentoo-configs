@@ -1,8 +1,14 @@
-## package.accept_keywords
+# Loosies
 net-vpn/i2p ~amd64
 games-emulation/ppsspp ~amd64
 sys-power/thermald ~amd64
 www-client/torbrowser-launcher ~amd64
 net-misc/chrony ~amd64 
-x11-themes/arc-theme ~amd64
 games-util/steam-launcher ~amd64
+# Electrum
+net-misc/electrum ~amd64
+=dev-python/idna-ssl-1.1.0 ~amd64
+=dev-python/async_timeout-3.0.0 ~amd64
+=dev-python/aiohttp-socks-0.2.2 ~amd64
+=dev-python/aiorpcX-0.10.2 ~amd64
+=dev-python/aiohttp-3.4.4 ~amd64
