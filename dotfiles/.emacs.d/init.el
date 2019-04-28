@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell minesweeper term+ djvu emms pdf-tools evil indent-tools ssh xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -41,6 +41,9 @@
 (add-hook 'window-setup-hook 'delete-other-windows) ;;Only show one active window
 (fset 'yes-or-no-p 'y-or-n-p) ;;replace yes/no with y/n prompt
 (setq initial-scratch-message "") ;;make scratch empty
+(setq echo-keystrokes 0.1
+      use-dialog-box nil ;;remove dialog box
+      visible-bell t) ;;visual instead of bell audio
 
 ;; Change default location of Mail and News
 (setq message-directory "~/.emacs.d/mail/")
@@ -51,9 +54,14 @@
 ;; Enable GNUPG
 (setf epa-pinentry-mode 'loopback)
 
+;; Disable backup files
+(setq make-backup-files nil)
+
 ;; Global Modes
 (ivy-mode 1)
 (global-undo-tree-mode 1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; Eww Browser
 (setq eww-download-directory "~/downloads/") ;; download dir
@@ -115,6 +123,12 @@
        "  Δ:"
        battery-mode-line-string))
 
+;; eshell config
+(setq eshell-visual-commands
+      '("less" "tmux" "top" "bash" "man"))
+(setq eshell-visual-subcommands
+      '("git" "log" "diff"))
+
 ;; Custom Functions
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
@@ -150,10 +164,10 @@
 (global-set-key (kbd "C-x p") 'send-invisible) ;;put password in minibuffer
 (global-set-key (kbd "C-x t") 'untabify) ;; untabify shortcut
 (global-set-key (kbd "C-x a") 'comment-or-uncomment-region-or-line) ;;comment region
-(global-set-key (kbd "<XF86AudioRaiseVolume>") 'volume-up) ;;raise volume
-(global-set-key (kbd "<XF86AudioLowerVolume>") 'volume-down) ;;lower volume
-(global-set-key (kbd "<XF86MonBrightnessUp>") 'bright-up) ;;raise brightness
-(global-set-key (kbd "<XF86MonBrightnessDown>") 'bright-down) ;;lower brightness
+;;(global-set-key (kbd "<XF86AudioRaiseVolume>") 'volume-up) ;;raise volume
+;;(global-set-key (kbd "<XF86AudioLowerVolume>") 'volume-down) ;;lower volume
+;;(global-set-key (kbd "<XF86MonBrightnessUp>") 'bright-up) ;;raise brightness
+;;(global-set-key (kbd "<XF86MonBrightnessDown>") 'bright-down) ;;lower brightness
 (global-set-key
  (kbd "C-x n C-x t")
  (lambda()
