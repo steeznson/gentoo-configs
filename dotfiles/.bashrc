@@ -17,7 +17,7 @@ export VISUAL='vim'
 export EDITOR='ex'
 
 # Default Browser
-export BROWSER='firefox-bin'
+export BROWSER='seamonkey-bin'
 
 # Standalone PHP
 alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'

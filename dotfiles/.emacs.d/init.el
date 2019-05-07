@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (php-mode flycheck-irony undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -42,8 +42,8 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;;replace yes/no with y/n prompt
 (setq initial-scratch-message "") ;;make scratch empty
 (setq echo-keystrokes 0.1
-      use-dialog-box nil ;;remove dialog box
-      visible-bell t) ;;visual instead of bell audio
+      use-dialog-box nil) ;;remove dialog box
+;;      visible-bell t) ;;visual instead of bell audio
 
 ;; Change default location of Mail and News
 (setq message-directory "~/.emacs.d/mail/")
@@ -65,6 +65,8 @@
 
 ;; Eww Browser
 (setq eww-download-directory "~/downloads/") ;; download dir
+(setq url-proxy-services
+      '(("http" . "127.0.0.1:8118")))
 
 ;; Global Formatting Configuration
 (setq-default indent-tabs-mode nil)  ;; Use only spaces and no tabs
@@ -81,6 +83,7 @@
 (add-hook 'c-mode-common-hook 'linum-mode)
 (add-hook 'c-mode-common-hook 'irony-mode)
 ;; (Conditional) C/C++ Keybinds
+(add-hook 'c-mode-common-hook 'flycheck-mode)
 (add-hook 'c-mode-common-hook
           (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
 (add-hook 'c-mode-common-hook
@@ -96,6 +99,7 @@
 (add-hook 'python-mode-hook 'linum-mode)
 (add-hook 'python-mode-hook 'company-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'python-mode-hook 'toggle-truncate-lines)
 
 ;; Rust development configs
 (add-hook 'rust-mode-hook 'linum-mode)
@@ -128,6 +132,10 @@
       '("less" "tmux" "top" "bash" "man"))
 (setq eshell-visual-subcommands
       '("git" "log" "diff"))
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*shell*")
+               display-buffer-same-window
+               (reusable-frames . visible)))
 
 ;; Custom Functions
 (defun comment-or-uncomment-region-or-line ()

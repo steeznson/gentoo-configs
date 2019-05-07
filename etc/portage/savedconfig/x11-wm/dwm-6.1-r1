@@ -8,7 +8,7 @@ static const char *fonts[] = {
 	"monospace:size=10"
 };
 static const char dmenufont[]       = "Inconsolatas:size=10";
-static const char normbordercolor[] = "#FFFFBA"; /* tile border */
+static const char normbordercolor[] = "#000"; /* tile border */
 static const char normbgcolor[]     = "#222222"; /* bar bg colour */
 static const char normfgcolor[]     = "#BBBBBB"; /* text colour */
 static const char selbordercolor[]  = "#B284BE"; /* selected tile border */
@@ -57,7 +57,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "urxvt", NULL };
 /* volume */
 static const char *upvol[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
@@ -66,8 +66,8 @@ static const char *uplight[] = { "xbacklight", "-inc", "10", NULL };
 static const char *downlight[] = { "xbacklight", "-dec", "10", NULL };
 /* emacs */
 static const char *launch_emacs[] = { "emacs", "--debug-init", NULL };
-/* firefox */
-static const char *launch_firefox[] = { "firefox-bin", NULL };
+/* surf */
+static const char *launch_surf[] = { "surf", "google.co.uk", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,7 +109,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = launch_emacs } },
-	{ MODKEY|ShiftMask, 		XK_f,	   spawn,	   {.v = launch_firefox } },
+	{ MODKEY|ShiftMask, 		XK_f,	   spawn,	   {.v = launch_surf } },
 };
 
 /* button definitions */
