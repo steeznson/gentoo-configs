@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (php-mode flycheck-irony undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (company-plsense helm flycheck-irony undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -80,8 +80,8 @@
 (setq c-default-style "bsd") ;; BSD/Allman brackets
 (setq c-basic-offset 4)      ;; 4-space indent
 (add-hook 'c-mode-common-hook 'company-mode)
-(add-hook 'c-mode-common-hook 'linum-mode)
 (add-hook 'c-mode-common-hook 'irony-mode)
+(add-hook 'c-mode-common-hook 'display-line-numbers-mode)
 ;; (Conditional) C/C++ Keybinds
 (add-hook 'c-mode-common-hook 'flycheck-mode)
 (add-hook 'c-mode-common-hook
@@ -96,13 +96,19 @@
   "Default Python interpreter for shell."
   :type 'string
   :group 'python)
-(add-hook 'python-mode-hook 'linum-mode)
 (add-hook 'python-mode-hook 'company-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'python-mode-hook 'toggle-truncate-lines)
+(add-hook 'python-mode-hook 'display-line-numbers-mode)
 
-;; Rust development configs
-(add-hook 'rust-mode-hook 'linum-mode)
+;; elisp development configs
+(add-hook 'emacs-lisp-mode-hook 'toggle-truncate-lines)
+(add-hook 'emacs-lisp-mode-hook 'display-line-numbers-mode)
+
+;; Perl development configs
+(add-hook 'perl-mode-hook 'company-mode)
+(add-hook 'perl-mode-hook 'toggle-truncate-lines)
+(add-hook 'perl-mode-hook 'display-line-numbers-mode)
 
 ;; Media Player
 (require 'emms-setup)
@@ -167,7 +173,7 @@
       (search-forward (concat "</" element-tag ">")))))))
 
 ;; Shortcuts
-(global-set-key (kbd "C-x /") 'linum-mode) ;;toggle linum-mode
+(global-set-key (kbd "C-x /") 'display-line-numbers-mode) ;;toggle lines
 (global-set-key (kbd "C-x w") 'toggle-truncate-lines) ;;toggle line wra
 (global-set-key (kbd "C-x p") 'send-invisible) ;;put password in minibuffer
 (global-set-key (kbd "C-x t") 'untabify) ;; untabify shortcut
