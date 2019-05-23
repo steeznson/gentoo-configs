@@ -16,12 +16,6 @@ PS1='[\u@\h \W]\$ '
 export VISUAL='vim'
 export EDITOR='ex'
 
-# Default Browser
-export BROWSER='seamonkey-bin'
-
-# Standalone PHP
-alias quickPHP='php -S localhost:8000 -t ~/Programming/public_html/'
-
 # Radio
 alias bbc1='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p'
 alias bbc1x='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p'
@@ -40,6 +34,9 @@ alias news='sh /home/james/programming/BitsOfBash/news_scraper.sh'
 
 # wpa_supplicant
 alias quickWPA='wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+
+# Standalone PHP
+alias quickPHP='php -S localhost:8000 -t ~/programming/'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'

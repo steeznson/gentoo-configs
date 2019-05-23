@@ -1,30 +1,24 @@
 # Troublemakers
-dev-libs/openssl -bindist
-net-misc/openssh -bindist
-media-libs/mesa -bindist
-sys-libs/ncurses -gpm
-media-libs/harfbuzz icu
-dev-libs/gmp abi_x86_32
-sys-auth/pambase consolekit
-net-print/cups -usb
-dev-lang/python sqlite
+app-crypt/gpgme python
 app-text/asciidoc python_single_target_python2_7
+dev-lang/python sqlite
+dev-libs/gmp abi_x86_32
+dev-libs/openssl -bindist
 dev-python/requests python_targets_python3_6
+media-libs/harfbuzz icu
+media-libs/mesa -bindist
+net-misc/openssh -bindist
+sys-libs/ncurses -gpm
+sys-auth/pambase consolekit
 
 # Preferences
-sys-libs/zlib minizip
-app-portage/layman sync-plugin-portage git
-app-editors/emacs libxml2 imagemagick
+app-arch/p7zip -wxwidgets
+app-editors/emacs libxml2 imagemagick xft
+games-emulation/mgba -qt5
 games-emulation/ppsspp libav sdl -system-ffmpeg -qt5
 media-video/ffmpeg gnutls
-app-arch/p7zip -wxwidgets
-games-emulation/mgba -qt5
-
-# Pulseaudio
-media-plugins/alsa-plugins pulseaudio
-
-# TorBrowser
->=app-crypt/gpgme-1.11.1 python
+sys-libs/zlib minizip
+x11-wm/dwm savedconfig
 
 # 32bit Graphics
 media-libs/mesa abi_x86_32
