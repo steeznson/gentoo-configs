@@ -1,10 +1,7 @@
 # Troublemakers
 app-crypt/gpgme python
-app-text/asciidoc python_single_target_python2_7
 dev-lang/python sqlite
-dev-libs/gmp abi_x86_32
 dev-libs/openssl -bindist
-dev-python/requests python_targets_python3_6
 media-libs/harfbuzz icu
 media-libs/mesa -bindist
 net-misc/openssh -bindist
@@ -20,28 +17,3 @@ media-video/ffmpeg gnutls
 sys-libs/zlib minizip
 x11-wm/dwm savedconfig
 
-# 32bit Graphics
-media-libs/mesa abi_x86_32
-dev-libs/expat abi_x86_32
-sys-libs/zlib abi_x86_32
-x11-libs/libX11 abi_x86_32
-x11-libs/libxshmfence abi_x86_32
-x11-libs/libXdamage abi_x86_32
-x11-libs/libXext abi_x86_32
-x11-libs/libxcb abi_x86_32
-x11-libs/libXfixes abi_x86_32
-x11-libs/libdrm abi_x86_32
-sys-devel/llvm abi_x86_32
-sys-libs/ncurses abi_x86_32
-x11-libs/libpciaccess abi_x86_32
-dev-libs/libpthread-stubs abi_x86_32
-x11-libs/libXau abi_x86_32
-x11-libs/libXdmcp abi_x86_32
-x11-base/xcb-proto abi_x86_32
-virtual/libffi abi_x86_32
-x11-libs/libXxf86vm abi_x86_32
-dev-libs/libffi abi_x86_32
-virtual/opengl abi_x86_32
-x11-libs/libXrandr abi_x86_32
-x11-libs/libXrender abi_x86_32
-dev-libs/libxml2 abi_x86_32

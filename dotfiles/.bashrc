@@ -30,7 +30,8 @@ alias bbc6='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p'
 alias weather='curl wttr.in/edinburgh'
 
 # News
-alias news='sh /home/james/programming/BitsOfBash/news_scraper.sh'
+alias news='curl http://feeds.bbci.co.uk/news/rss.xml?edition=int | grep -o --color=never "\[CDATA\[.*\]\]" | sed s/CDATA/\/g'
+alias headlines='news | head -n 20'
 
 # wpa_supplicant
 alias quickWPA='wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'

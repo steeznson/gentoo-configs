@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (company-plsense helm flycheck-irony undo-tree dockerfile-mode irony emms-player-simple-mpv company-jedi flycheck-pycheckers poker better-shell term+ djvu emms pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck wiki-summary sudoku ivy ecb dired-ranger better-defaults)))
+    (company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -109,16 +109,6 @@
 (add-hook 'perl-mode-hook 'company-mode)
 (add-hook 'perl-mode-hook 'toggle-truncate-lines)
 (add-hook 'perl-mode-hook 'display-line-numbers-mode)
-
-;; Media Player
-(require 'emms-setup)
-(emms-all)
-(emms-default-players)
-(setq emms-source-file-default-directory "~/music/")
-(global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
-(global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
-(global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
-(global-set-key (kbd "<XF86AudioNext>") 'emms-next)
 
 ;; Mode Line Config
 (setq display-time-default-load-average nil)
