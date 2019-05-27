@@ -1,11 +1,9 @@
 # Troublemakers
 app-crypt/gpgme python
 dev-lang/python sqlite
-dev-libs/openssl -bindist
 media-libs/harfbuzz icu
-media-libs/mesa -bindist
-net-misc/openssh -bindist
 sys-libs/ncurses -gpm
+sys-libs/zlib abi_x86_32 minizip
 sys-auth/pambase consolekit
 
 # Preferences
@@ -14,6 +12,4 @@ app-editors/emacs libxml2 imagemagick xft
 games-emulation/mgba -qt5
 games-emulation/ppsspp libav sdl -system-ffmpeg -qt5
 media-video/ffmpeg gnutls
-sys-libs/zlib minizip
 x11-wm/dwm savedconfig
-
