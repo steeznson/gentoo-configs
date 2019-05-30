@@ -1,5 +1,6 @@
 # Troublemakers
 app-crypt/gpgme python
+app-text/asciidoc python_single_target_python2_7
 dev-lang/python sqlite
 media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
@@ -12,4 +13,5 @@ app-editors/emacs libxml2 imagemagick xft
 games-emulation/mgba -qt5
 games-emulation/ppsspp libav sdl -system-ffmpeg -qt5
 media-video/ffmpeg gnutls
+x11-terms/st savedconfig
 x11-wm/dwm savedconfig

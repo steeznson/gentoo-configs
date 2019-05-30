@@ -13,8 +13,8 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Editors
-export VISUAL='vim'
-export EDITOR='ex'
+export VISUAL='emacs -nw'
+export EDITOR='ed'
 
 # Radio
 alias bbc1='mpv http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p'

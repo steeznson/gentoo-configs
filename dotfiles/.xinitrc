@@ -1,5 +1,4 @@
 setxkbmap -layout gb;
-xrdb -merge ~/.Xresources;
 while true; do
 	DATE="$( date '+%F %R' )"
 	CAP="$(df -H | grep -vE '^Filesystem|devtmpfs|tmpfs|shm|cgroup_root|none' | awk '{print$4 " " $1}')"
