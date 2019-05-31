@@ -37,7 +37,7 @@ alias headlines='news | head -n 20'
 alias quickWPA='wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 # Standalone PHP
-alias quickPHP='php -S localhost:8000 -t ~/programming/catherine'
+alias quickPHP='php -S localhost:8000 -t .'
 
 # download mp3 with youtube-dl
 alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
