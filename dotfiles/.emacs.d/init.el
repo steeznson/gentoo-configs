@@ -15,7 +15,7 @@
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
+    (wiki-summary evil dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -67,6 +67,7 @@
 (setq eww-download-directory "~/downloads/") ;; download dir
 (setq url-proxy-services
       '(("http" . "127.0.0.1:8118")))
+(setq browse-url-browser-function 'eww-browse-url) ;; use eww for links
 
 ;; Global Formatting Configuration
 (setq-default indent-tabs-mode nil)  ;; Use only spaces and no tabs
