@@ -45,3 +45,5 @@ alias ytdl-mp3='youtube-dl --extract-audio --audio-format mp3'
 # show battery % remaining
 alias battery='cat /sys/class/power_supply/BAT0/capacity'
 
+# ssh desktop
+alias desktop='ssh james@192.168.0.40 -p 8789'

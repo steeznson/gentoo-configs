@@ -8,14 +8,17 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes (quote (cyberpunk)))
+ '(custom-safe-themes
+   (quote
+    ("6bc387a588201caf31151205e4e468f382ecc0b888bac98b2b525006f7cb3307" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
  '(ecb-options-version "2.50")
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (wiki-summary evil dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
+    (emms evil cyberpunk-theme wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -27,8 +30,8 @@
 
 ;; Packages repo
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
-
+                         ("melpa" . "https://melpa.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")))
 ;; Buffer Management
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*") ;;Removes *messages* from the buffer.
@@ -62,6 +65,7 @@
 (global-undo-tree-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; Eww Browser
 (setq eww-download-directory "~/downloads/") ;; download dir
@@ -133,6 +137,12 @@
              `(,(rx bos "*shell*")
                display-buffer-same-window
                (reusable-frames . visible)))
+
+;; emms
+(add-to-list 'load-path "~/.emacs.d/emms/lisp/")
+(require 'emms-setup)
+(emms-all)
+(emms-default-players)
 
 ;; Custom Functions
 (defun comment-or-uncomment-region-or-line ()
