@@ -2,5 +2,4 @@ net-vpn/i2p ~amd64
 games-emulation/ppsspp ~amd64
 sys-power/thermald ~amd64
 net-misc/chrony ~amd64
-dev-perl/Modern-Perl ~amd64
 www-client/torbrowser-launcher ~amd64
