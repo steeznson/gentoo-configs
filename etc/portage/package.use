@@ -1,16 +1,12 @@
 # Troublemakers
-app-crypt/gpgme python
 dev-lang/python sqlite
 media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
-sys-libs/zlib abi_x86_32 minizip
 sys-auth/pambase consolekit
 
 # Preferences
 app-arch/p7zip -wxwidgets
 app-editors/emacs libxml2 imagemagick xft
-games-emulation/mgba -qt5
-games-emulation/ppsspp libav sdl -system-ffmpeg -qt5
 media-video/ffmpeg gnutls
 x11-terms/st savedconfig
 x11-wm/dwm savedconfig
