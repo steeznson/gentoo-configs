@@ -1,2 +1,2 @@
 # gentoo-configs
-Thinkpad T430
+for desktop with AMD Ryzen 2600 and RX480
