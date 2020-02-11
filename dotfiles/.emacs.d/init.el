@@ -8,17 +8,18 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (cyberpunk)))
+ '(custom-enabled-themes (quote (adwaita)))
  '(custom-safe-themes
    (quote
     ("6bc387a588201caf31151205e4e468f382ecc0b888bac98b2b525006f7cb3307" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
  '(ecb-options-version "2.50")
+ '(fci-rule-color "#383838")
  '(load-home-init-file t t)
  '(package-selected-packages
    (quote
-    (emms evil cyberpunk-theme wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
+    (dumb-jump rust-mode emms evil wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t))
 (custom-set-faces
@@ -32,13 +33,13 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 ;; Buffer Management
-(setq-default message-log-max nil)
 (kill-buffer "*Messages*") ;;Removes *messages* from the buffer.
+(setq-default message-log-max nil)
 (add-hook 'minibuffer-exit-hook ;;Removes *Completions* from buffer.
-      '(lambda ()
-         (let ((buffer "*Completions*"))
-           (and (get-buffer buffer)
-                (kill-buffer buffer)))))
+	  '(lambda ()
+	     (let ((buffer "*Completions*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
 (setq inhibit-startup-buffer-menu t) ;;Hide buffer list
 (add-hook 'window-setup-hook 'delete-other-windows) ;;Only show one active window
 (fset 'yes-or-no-p 'y-or-n-p) ;;replace yes/no with y/n prompt
@@ -61,10 +62,15 @@
 
 ;; Global Modes
 (ivy-mode 1)
+(dumb-jump-mode 1)
 (global-undo-tree-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
+
+;; Make CTRL-x CTRL-u the "undo" command; this is better than "CTRL-x u"
+;; because you don't have to release the CTRL key.
+(define-key global-map "\C-x\C-u" 'undo)
 
 ;; Eww Browser
 (setq eww-download-directory "~/downloads/") ;; download dir
@@ -89,13 +95,14 @@
 ;; (Conditional) C/C++ Keybinds
 (add-hook 'c-mode-common-hook 'flycheck-mode)
 (add-hook 'c-mode-common-hook
-          (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
+	  (lambda () (local-set-key (kbd "<C-tab>") 'company-complete)))
 (add-hook 'c-mode-common-hook
-          (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
+	  (lambda () (local-set-key (kbd "C-c j") 'find-tag)))
 
 ;; Python Development Configs
 (setenv "PYTHONPATH" (shell-command-to-string "$SHELL --login -c 'echo -n $PYTHONPATH'"))
 (setq py-python-command "python3")
+(setq flycheck-python-pycompile-executable "python3")
 (defcustom python-shell-interpreter "python3"
   "Default Python interpreter for shell."
   :type 'string
@@ -109,6 +116,10 @@
 (add-hook 'emacs-lisp-mode-hook 'toggle-truncate-lines)
 (add-hook 'emacs-lisp-mode-hook 'display-line-numbers-mode)
 
+;; rust development configs
+(add-hook 'rust-mode-hook 'toggle-truncate-lines)
+(add-hook 'rust-mode-hook 'display-line-numbers-mode)
+
 ;; Perl development configs
 (add-hook 'perl-mode-hook 'company-mode)
 (add-hook 'perl-mode-hook 'toggle-truncate-lines)
@@ -119,13 +130,13 @@
 (display-time-mode t)
 (display-battery-mode 1)
 (setq-default mode-line-format
-     '("Λ:%m"
-       "  Π:%b"
-       "  ω:%l"
-       "  τ:"
-       display-time-string
-       "  Δ:"
-       battery-mode-line-string))
+	      '("Λ:%m"
+		"  Π:%b"
+		"  ω:%l"
+		"  τ:"
+		display-time-string
+		"  Δ:"
+		battery-mode-line-string))
 
 ;; eshell config
 (setq eshell-visual-commands
@@ -133,9 +144,9 @@
 (setq eshell-visual-subcommands
       '("git" "log" "diff"))
 (add-to-list 'display-buffer-alist
-             `(,(rx bos "*shell*")
-               display-buffer-same-window
-               (reusable-frames . visible)))
+	     `(,(rx bos "*shell*")
+	       display-buffer-same-window
+	       (reusable-frames . visible)))
 
 ;; emms
 (add-to-list 'load-path "~/.emacs.d/emms/lisp/")
@@ -145,13 +156,13 @@
 
 ;; Custom Functions
 (defun comment-or-uncomment-region-or-line ()
-    "Comments or uncomments the region or the current line if there's no active region."
-    (interactive)
-    (let (beg end)
-        (if (region-active-p)
-            (setq beg (region-beginning) end (region-end))
-            (setq beg (line-beginning-position) end (line-end-position)))
-        (comment-or-uncomment-region beg end)))
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+	(setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
 (defun volume-up()
   (interactive)
   (shell-command "amixer set Master 5+"))
@@ -166,11 +177,11 @@
   (shell-command "xbacklight -dec 10"))
 (defun remove-all-specified-elements (element-tag)
   (save-excursion
-     (let ((case-fold-search nil))
-       (while (search-forward-regexp (concat "<" element-tag "[^\\>]*>"))
-     (delete-region
-      (match-beginning 0)
-      (search-forward (concat "</" element-tag ">")))))))
+    (let ((case-fold-search nil))
+      (while (search-forward-regexp (concat "<" element-tag "[^\\>]*>"))
+	(delete-region
+	 (match-beginning 0)
+	 (search-forward (concat "</" element-tag ">")))))))
 
 ;; Shortcuts
 (global-set-key (kbd "C-x /") 'display-line-numbers-mode) ;;toggle lines
@@ -178,6 +189,7 @@
 (global-set-key (kbd "C-x p") 'send-invisible) ;;put password in minibuffer
 (global-set-key (kbd "C-x t") 'untabify) ;; untabify shortcut
 (global-set-key (kbd "C-x a") 'comment-or-uncomment-region-or-line) ;;comment region
+(global-set-key (kbd "C-x ,") 'dumb-jump-go) ;; jump to func definition
 ;;(global-set-key (kbd "<XF86AudioRaiseVolume>") 'volume-up) ;;raise volume
 ;;(global-set-key (kbd "<XF86AudioLowerVolume>") 'volume-down) ;;lower volume
 ;;(global-set-key (kbd "<XF86MonBrightnessUp>") 'bright-up) ;;raise brightness
