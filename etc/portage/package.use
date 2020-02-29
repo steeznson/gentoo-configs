@@ -1,7 +1,6 @@
 # Troublemakers
 media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
-sys-auth/pambase consolekit
 dev-lang/python sqlite
 dev-db/sqlite secure-delete
 sys-devel/clang python_single_target_python3_6
@@ -10,11 +9,11 @@ app-emulation/docker overlay -device-mapper
 x11-libs/libdrm libkms
 sys-apps/systemd cgroup-hybrid
 sys-libs/zlib minizip
-
+media-libs/libvpx postproc
+dev-qt/qtmultimedia widgets
 # Preferences
 app-arch/p7zip -wxwidgets
 app-editors/emacs libxml2 imagemagick xft
 media-video/ffmpeg gnutls
 x11-terms/st savedconfig
 x11-wm/dwm savedconfig
-

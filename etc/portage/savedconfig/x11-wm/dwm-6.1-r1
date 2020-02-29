@@ -5,9 +5,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-        "monospace:size=14"
+        "Inconsolata:size=26"
 };
-static const char dmenufont[]       = "monospace:size=14";
+static const char dmenufont[]       = "Inconsolata:size=26";
 static const char normbordercolor[] = "#222222"; /* tile border */
 static const char normbgcolor[]     = "#222222"; /* bar bg colour */
 static const char normfgcolor[]     = "#BBBBBB"; /* text colour */
