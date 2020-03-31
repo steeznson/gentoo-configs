@@ -8,26 +8,27 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (adwaita)))
+ '(custom-enabled-themes (quote (wombat)))
  '(custom-safe-themes
    (quote
     ("6bc387a588201caf31151205e4e468f382ecc0b888bac98b2b525006f7cb3307" default)))
- '(display-battery-mode t)
  '(display-time-mode t)
  '(ecb-options-version "2.50")
  '(fci-rule-color "#383838")
  '(load-home-init-file t t)
+ '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (dumb-jump rust-mode emms evil wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
+    (slime dumb-jump rust-mode emms evil wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku ivy ecb dired-ranger better-defaults)))
  '(send-mail-function (quote smtpmail-send-it))
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "Inconsolata" :foundry "PfEd" :slant normal :weight normal :height 241 :width normal)))))
 
 ;; Packages repo
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -63,7 +64,7 @@
 ;; Global Modes
 (ivy-mode 1)
 (dumb-jump-mode 1)
-(global-undo-tree-mode 1)
+;;(global-undo-tree-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
@@ -87,10 +88,11 @@
 ;; C/C++ Development Config
 (semantic-mode 1)            ;; CEDET holdover
 (global-ede-mode 1)          ;; CEDET holdover
-(setq c-default-style "bsd") ;; BSD/Allman brackets
+(setq c-default-style "bsd") ;; BSD brackets
 (setq c-basic-offset 4)      ;; 4-space indent
 (add-hook 'c-mode-common-hook 'company-mode)
 (add-hook 'c-mode-common-hook 'irony-mode)
+(add-hook 'c-mode-common-hook 'toggle-truncate-lines)
 (add-hook 'c-mode-common-hook 'display-line-numbers-mode)
 ;; (Conditional) C/C++ Keybinds
 (add-hook 'c-mode-common-hook 'flycheck-mode)
@@ -115,6 +117,11 @@
 ;; elisp development configs
 (add-hook 'emacs-lisp-mode-hook 'toggle-truncate-lines)
 (add-hook 'emacs-lisp-mode-hook 'display-line-numbers-mode)
+
+;; common lisp development configs
+(setq inferior-lisp-program (executable-find "clisp"))
+(add-hook 'lisp-mode-hook 'toggle-truncate-lines)
+(add-hook 'lisp-mode-hook 'display-line-numbers-mode)
 
 ;; rust development configs
 (add-hook 'rust-mode-hook 'toggle-truncate-lines)
@@ -165,10 +172,10 @@
     (comment-or-uncomment-region beg end)))
 (defun volume-up()
   (interactive)
-  (shell-command "amixer set Master 5+"))
+  (shell-command "pactl set-sink-volume 0 +5%"))
 (defun volume-down()
   (interactive)
-  (shell-command "amixer set Master 5-"))
+  (shell-command "pactl set-sink-volume 0 -5%"))
 (defun bright-up()
   (interactive)
   (shell-command "xbacklight -inc 10"))
