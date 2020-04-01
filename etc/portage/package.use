@@ -3,7 +3,7 @@ media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
 dev-lang/python sqlite
 dev-db/sqlite secure-delete
-sys-devel/clang python_single_target_python3_6
+sys-devel/clang python_single_target_python3_7
 sys-kernel/linux-firmware -savedconfig
 app-emulation/docker overlay -device-mapper
 x11-libs/libdrm libkms
@@ -11,9 +11,14 @@ sys-apps/systemd cgroup-hybrid
 sys-libs/zlib minizip
 media-libs/libvpx postproc
 dev-qt/qtmultimedia widgets
+app-editors/pluma python_single_target_python2_7
+dev-util/gtk-doc python_single_target_python2_7
+app-crypt/pinentry gnome-keyring
 # Preferences
 app-arch/p7zip -wxwidgets
-app-editors/emacs libxml2 imagemagick xft
+app-editors/emacs dynamic-loading imagemagick libxml2 sound xft
+media-gfx/imagemagick djvu postscript webp
 media-video/ffmpeg gnutls
+net-misc/curl curl_ssl_gnutls -curl_ssl_openssl
 x11-terms/st savedconfig
 x11-wm/dwm savedconfig
