@@ -1,19 +1,22 @@
 # Troublemakers
 media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
-dev-lang/python sqlite
-dev-db/sqlite secure-delete
-sys-devel/clang python_single_target_python3_7
-sys-kernel/linux-firmware -savedconfig
+# Docker
 app-emulation/docker overlay -device-mapper
-x11-libs/libdrm libkms
 sys-apps/systemd cgroup-hybrid
-sys-libs/zlib minizip
-media-libs/libvpx postproc
-dev-qt/qtmultimedia widgets
-app-editors/pluma python_single_target_python2_7
-dev-util/gtk-doc python_single_target_python2_7
-app-crypt/pinentry gnome-keyring
+# AMDGPU
+x11-libs/libdrm libkms
+sys-kernel/linux-firmware -savedconfig
+# Python
+dev-java/javatoolkit python_targets_python2_7
+dev-python/setuptools python_targets_python2_7
+dev-python/certifi python_targets_python2_7
+sys-devel/clang python_single_target_python3_7
+# Firefox
+dev-db/sqlite secure-delete
+# KDE
+dev-qt/qtprintsupport cups
+app-text/ghostscript-gpl cups
 # Preferences
 app-arch/p7zip -wxwidgets
 app-editors/emacs dynamic-loading imagemagick libxml2 sound xft
@@ -21,4 +24,5 @@ media-gfx/imagemagick djvu postscript webp
 media-video/ffmpeg gnutls
 net-misc/curl curl_ssl_gnutls -curl_ssl_openssl
 x11-terms/st savedconfig
+x11-themes/fvwm-crystal python_targets_python2_7
 x11-wm/dwm savedconfig

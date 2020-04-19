@@ -1,2 +1,6 @@
+net-vpn/i2p ~amd64
 games-fps/gzdoom ~amd64
 media-gfx/imagemagick ~amd64
+games-fps/darkplaces ~amd64
+games-misc/gtklife ~amd64
+=sys-libs/glibc-2.30-r8 ~amd64
