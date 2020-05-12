@@ -7,22 +7,24 @@ sys-apps/systemd cgroup-hybrid
 # AMDGPU
 x11-libs/libdrm libkms
 sys-kernel/linux-firmware -savedconfig
-# Python
-dev-java/javatoolkit python_targets_python2_7
-dev-python/setuptools python_targets_python2_7
-dev-python/certifi python_targets_python2_7
-sys-devel/clang python_single_target_python3_7
 # Firefox
 dev-db/sqlite secure-delete
 # KDE
 dev-qt/qtprintsupport cups
 app-text/ghostscript-gpl cups
+# Tor Browser
+app-crypt/gpgme python
+# Dolphin
+media-libs/libsdl2 haptic
+# PCSXR
+games-emulation/pcsxr -alsa -sdl
+# 7zip
+app-arch/p7zip wxwidgets -kde
+# PPSSPP
+games-emulation/ppsspp qt5 libav -system-ffmpeg -sdl
 # Preferences
 app-arch/p7zip -wxwidgets
 app-editors/emacs dynamic-loading imagemagick libxml2 sound xft
 media-gfx/imagemagick djvu postscript webp
-media-video/ffmpeg gnutls
-net-misc/curl curl_ssl_gnutls -curl_ssl_openssl
 x11-terms/st savedconfig
-x11-themes/fvwm-crystal python_targets_python2_7
 x11-wm/dwm savedconfig
