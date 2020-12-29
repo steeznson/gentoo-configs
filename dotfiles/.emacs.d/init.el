@@ -189,6 +189,8 @@
 	(delete-region
 	 (match-beginning 0)
 	 (search-forward (concat "</" element-tag ">")))))))
+(defun alist-keys (alist)
+  (mapcar 'car alist))
 (defun get-json (uri)
   "Fetch the contents of URI and parse."
   (with-current-buffer (url-retrieve-synchronously uri)
@@ -196,17 +198,23 @@
     (goto-char url-http-end-of-headers)
     (prog1 (json-read)
       (kill-buffer))))
+(defun catreplies (replies)
+  (mapconcat (lambda (x)
+            (format "\n%s\n" (cdr (assoc-string "com" x)))) replies ""))
 (defun random-gee ()
   (interactive)
   (setq catalog
     (get-json "https://a.4cdn.org/g/catalog.json"))
   (setq thread (aref (cdr (assoc-string "threads" (aref catalog 0))) (random 10)))
-  (setq content
+  (setq op
       (format "\n%s\t%s\t%s\n%s"
               (cdr (assoc-string "no" thread))
               (cdr (assoc-string "name" thread))
               (cdr (assoc-string "sub" thread))
               (cdr (assoc-string "com" thread))))
+  (setq rawreplies (cdr (assoc-string "last_replies" thread)))
+  (setq replies (catreplies rawreplies))
+  (setq content (concat op replies))
   (with-current-buffer (get-buffer-create "*/g/*") (insert content))
   (switch-to-buffer "*/g/*"))
 
