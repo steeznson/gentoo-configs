@@ -1,15 +1,10 @@
-dev-perl/Net-Twitter-Lite ~amd64
-dev-perl/JSON-Any ~amd64
-dev-perl/Net-OAuth ~amd64
-games-fps/gzdoom ~amd64
-games-fps/darkplaces ~amd64
+games-emulation/mednafen ~amd64
+games-emulation/ppsspp ~amd64
 games-emulation/rpcs3 ~amd64
 games-util/game-device-udev-rules ~amd64
 games-util/steam-meta ~amd64
 games-util/steam-launcher ~amd64
 games-util/steam-client-meta ~amd64
 games-util/steam-games-meta ~amd64
-media-gfx/imagemagick ~amd64
-media-libs/zmusic ~amd64
-<sys-devel/llvm-11.0.0 ~amd64 # rpcs3
-net-libs/nativebiginteger ~amd64
+#games-util/steamtinkerlaunch ~amd64
+net-misc/chrony ~amd64

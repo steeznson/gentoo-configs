@@ -4,29 +4,23 @@ media-gfx/imagemagick djvu postscript webp
 media-libs/mesa vulkan d3d9
 x11-wm/dwm savedconfig
 # Troublemakers
+#dev-libs/boost debug # https://bugs.gentoo.org/724314
 media-libs/harfbuzz icu
 sys-libs/ncurses -gpm
-# QT
-sys-apps/dbus user-session
-# Docker
-app-emulation/docker overlay -device-mapper
-sys-apps/systemd cgroup-hybrid
+
 # AMDGPU
 x11-libs/libdrm libkms
 sys-kernel/linux-firmware -savedconfig
-# Firefox
-dev-db/sqlite secure-delete
-media-libs/libvpx postproc
+# Falkon
+dev-qt/qtwebengine widgets
+dev-qt/qtwebchannel qml
+# Mednafen
+>=sys-libs/zlib-1.2.11-r3 minizip
+# PPSSPP
+games-emulation/ppsspp qt5 libav -system-ffmpeg -sdl
 # RPCS3
 games-emulation/rpcs3 vulkan
 >=media-libs/vulkan-loader-1.1.125 wayland
-# 7zip
-app-arch/p7zip wxwidgets -kde
-# Mono
-dev-lang/mono minimal
-# KDE
-dev-qt/qtprintsupport cups
-app-text/ghostscript-gpl cups
 # Steam
 dev-libs/libpcre abi_x86_32
 dev-libs/elfutils abi_x86_32
@@ -66,3 +60,4 @@ app-arch/bzip2 abi_x86_32
 dev-util/pkgconf abi_x86_32 internal-glib
 dev-util/pkgconfig internal-glib
 app-arch/zstd abi_x86_32
+

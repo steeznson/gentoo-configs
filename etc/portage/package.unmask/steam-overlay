@@ -1,0 +1,4 @@
+games-util/steam-client-meta::steam-overlay
+games-util/steam-games-meta::steam-overlay
+games-util/steam-launcher::steam-overlay
+games-util/steam-meta::steam-overlay
