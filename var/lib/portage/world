@@ -41,8 +41,6 @@ net-misc/dhcpcd
 net-misc/electrum
 net-misc/openssh
 net-misc/youtube-dl
-net-proxy/privoxy
-net-vpn/i2p
 net-wireless/iw
 net-wireless/wpa_supplicant
 sys-apps/ack
