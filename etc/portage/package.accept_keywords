@@ -1,10 +1,12 @@
+games-emulation/desmume ~amd64
 games-emulation/mednafen ~amd64
+games-emulation/pcsx2 ~abi_x86_32
 games-emulation/ppsspp ~amd64
-games-emulation/rpcs3 ~amd64
+games-misc/bsd-games ~amd64
 games-util/game-device-udev-rules ~amd64
 games-util/steam-meta ~amd64
 games-util/steam-launcher ~amd64
 games-util/steam-client-meta ~amd64
 games-util/steam-games-meta ~amd64
-#games-util/steamtinkerlaunch ~amd64
 net-misc/chrony ~amd64
+net-vpn/i2p ~amd64

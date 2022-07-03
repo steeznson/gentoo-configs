@@ -1,3 +1,5 @@
+# /etc/skel/.bashrc
+#
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
 # that can't tolerate any output.  So make sure this doesn't display
@@ -16,7 +18,7 @@ fi
 # Put your fun stuff here.
 
 # Editors
-export VISUAL='emacs -nw'
+export VISUAL='nvim'
 export EDITOR='ed'
 
 # Radio
@@ -49,3 +51,4 @@ alias mute="pactl set-sink-mute $(pactl list short sinks | grep analog |awk '{pr
 
 # display settings
 alias noblank='xset -dpms; xset s off; xset s noblank'
+
