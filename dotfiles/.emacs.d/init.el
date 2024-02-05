@@ -9,21 +9,22 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(auth-source-save-behavior nil)
+ '(column-number-mode t)
  '(custom-enabled-themes nil)
  '(custom-safe-themes
    '("6bc387a588201caf31151205e4e468f382ecc0b888bac98b2b525006f7cb3307" default))
  '(display-time-mode t)
  '(ecb-options-version "2.50")
- '(elfeed-feeds '("phoronix.com/rss.php" "https://feeds.bbci.co.uk/sport/tennis/rss.xml" "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml"))
+ '(elfeed-feeds
+   '("https://planet.gentoo.org/rss20.xml" "phoronix.com/rss.php" "https://feeds.bbci.co.uk/sport/tennis/rss.xml" "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml" "https://draculadaily.substack.com/feed" "old.reddit.com/r/ukpolitics.rss" "old.reddit.com/r/games.rss"))
  '(fci-rule-color "#383838")
  '(global-emojify-mode nil)
  '(gnus-select-method '(nnhackernews ""))
  '(load-home-init-file t t)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(ivy consult mastodon paredit elfeed hackernews dumb-jump nhexl-mode ob-browser emms evil wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku dired-ranger better-defaults))
+   '(auto-header auto-dim-other-buffers auto-correct aumix-mode auctex 0xc async ascii-art-to-unicode arduino-mode magit 0x0 arbitools apropospriate-theme apache-mode anzu anti-zenburn-theme 0blayout annotate ample-theme ahg ampc altcaps all alect-themes aircon-theme ahungry-theme aggressive-indent aggressive-completion afternoon-theme advice-patch adoc-mode adjust-parens adaptive-wrap ada-ref-man ada-mode ack ace-window gnu-elpa-keyring-update ivy consult mastodon paredit elfeed hackernews dumb-jump nhexl-mode ob-browser emms evil wiki-summary dockerfile-mode company-plsense flycheck-irony undo-tree irony company-jedi flycheck-pycheckers better-shell term+ djvu pdf-tools indent-tools xml+ company-c-headers yaml-mode nov sicp flycheck sudoku dired-ranger better-defaults))
  '(send-mail-function 'smtpmail-send-it)
- '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -101,8 +102,8 @@
  erc-port "6667")
 
 ;; Mastodon
-(setq mastodon-instance-url "https://mastodon.social"
-      mastodon-active-user "steeznson@mastodon.social")
+(setq mastodon-instance-url "https://glasgow.social"
+      mastodon-active-user "steeznson@social.treehouse.systems")
 
 ;; Global Formatting Configuration
 (setq-default indent-tabs-mode nil)
