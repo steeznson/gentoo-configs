@@ -103,7 +103,7 @@
 
 ;; Mastodon
 (setq mastodon-instance-url "https://glasgow.social"
-      mastodon-active-user "steeznson@social.treehouse.systems")
+      mastodon-active-user "steeznson@glasgow.social")
 
 ;; Global Formatting Configuration
 (setq-default indent-tabs-mode nil)
