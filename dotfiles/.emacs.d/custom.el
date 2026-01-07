@@ -155,9 +155,18 @@
               (cdr (assoc-string "com" thread))))
   (setq rawreplies (cdr (assoc-string "last_replies" thread)))
   (setq replies (catreplies rawreplies))
-  (setq content (concat op replies))
+  (setq content
+        (replace-regexp-in-string "<wbr>" "\n"
+           (replace-regexp-in-string "<br>" "\n"
+                (concat op replies) t) t))
   (with-current-buffer (get-buffer-create "*/g/*") (insert content))
   (switch-to-buffer "*/g/*"))
+(defun c-to-f-temp (x)
+  (interactive "nEnter celcius: ")
+  (princ (+ 32(* x 1.8))))
+(defun f-to-c-temp (x)
+  (interactive "nEnter farenheit: ")
+  (princ(/ (- x 32) 1.8)))
 
 ;; Shortcuts
 (global-set-key (kbd "C-x /") 'display-line-numbers-mode) ;;toggle lines
